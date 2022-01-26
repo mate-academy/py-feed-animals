@@ -30,16 +30,13 @@ class Dog(Animal):
     def __init__(self, name, is_hungry=True):
         super(Dog, self).__init__(name, 7, is_hungry)
 
-    def bring_slippers(self):
+    @staticmethod
+    def bring_slippers():
         print("The slippers delivered!")
 
 
 def feed_animals(lst):
-    count = 0
-    for beast in lst:
-        if beast.is_hungry is True:
-            count += beast.appetite
-    return count
+    return sum([beast.appetite for beast in lst if beast.is_hungry is True])
 
 # cat = Cat("Cat", False)
 # lion = Animal("Lion", 25, True)
