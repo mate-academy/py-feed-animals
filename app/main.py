@@ -34,7 +34,6 @@ class Dog(Animal):
     def __init__(self, name: str, is_hungry=True):
         super().__init__(name, appetite=7)
         self.is_hungry = is_hungry
-        print()
 
     @staticmethod
     def bring_slippers():
