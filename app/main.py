@@ -42,8 +42,6 @@ class Dog(Animal):
 
 
 def feed_animals(animals):
-    need_to_feed = 0
-    for animal in animals:
-        if animal.is_hungry is True:
-            need_to_feed += animal.appetite
-    return need_to_feed
+    return sum(animal.appetite
+               for animal in animals
+               if animal.is_hungry is True)
