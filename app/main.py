@@ -13,6 +13,8 @@ class Animal:
             self.is_hungry = False
             food_points, self.appetite = self.appetite, 0
             return food_points
+        else:
+            return 0
 
 
 class Cat(Animal):
