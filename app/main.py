@@ -9,9 +9,10 @@ class Animal:
 
     def feed(self):
         print(f'Eating {self.appetite} food points...')
-        self.is_hungry = False
-        food_points, self.appetite = self.appetite, 0
-        return food_points
+        if self.is_hungry:
+            self.is_hungry = False
+            food_points, self.appetite = self.appetite, 0
+            return food_points
 
 
 class Cat(Animal):
