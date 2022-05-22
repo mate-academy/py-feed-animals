@@ -6,7 +6,7 @@ class Animal:
         self.is_hungry = is_hungry
 
     def print_name(self):
-        print(f"Hello, my name is {self.name}")
+        print(f"Hello, I'm {self.name}")
 
     def feed(self):
         if self.is_hungry:
@@ -33,7 +33,7 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers():
-        print("The slippers delivered")
+        print("The slippers delivered!")
 
 
 def feed_animals(animals: list):
