@@ -17,7 +17,7 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self, name, is_hungry=True):
-        super(Cat, self).__init__(name, 3, is_hungry)
+        super().__init__(name, 3, is_hungry)
 
     @staticmethod
     def catch_mouse():
@@ -26,7 +26,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name, is_hungry=True):
-        super(Dog, self).__init__(name, 7, is_hungry)
+        super().__init__(name, 7, is_hungry)
 
     @staticmethod
     def bring_slippers():
