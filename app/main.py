@@ -3,7 +3,8 @@ class Animal:
             self,
             name: str,
             appetite: int = 0,
-            is_hungry: bool = True):
+            is_hungry: bool = True
+    ):
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
