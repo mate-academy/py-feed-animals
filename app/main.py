@@ -18,7 +18,7 @@ class Animal:
 
 class Cat(Animal):
 
-    def __init__(self,name, is_hungry=True):
+    def __init__(self, name, is_hungry=True):
         super().__init__(name, 3, is_hungry)
 
     @staticmethod
