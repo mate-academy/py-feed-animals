@@ -41,4 +41,3 @@ def feed_animals(list_animals: list) -> int:
             count += animal.appetite
 
     return count
-
