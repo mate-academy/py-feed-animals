@@ -38,3 +38,4 @@ def feed_animals(animals: list):
     for animal in animals:
         need_food += animal.feed()
     return need_food
+
