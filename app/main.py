@@ -40,6 +40,6 @@ def feed_animals(animals: list):
     food_point = 0
     for animal in animals:
         if animal.is_hungry:
-            food_point += animal.appetite
+            food_point += animal.feed()
             animal.is_hungry = False
     return food_point
