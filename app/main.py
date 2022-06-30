@@ -7,15 +7,14 @@ class Animal:
         self.is_hungry = is_hungry
 
     def print_name(self):
-        print(f'Hello, I\'m {self.name}')
+        print(f"Hello, I'm {self.name}")
 
     def feed(self):
         if self.is_hungry:
-            print(f'Eating {self.appetite} food points...')
+            print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0
 
 
 class Cat(Animal):
