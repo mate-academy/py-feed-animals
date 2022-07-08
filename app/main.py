@@ -8,12 +8,12 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self):
+        food = 0
         if self.is_hungry is True:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
-            return self.appetite
-        else:
-            return 0
+            food = self.appetite
+        return food
 
 
 class Cat(Animal):
