@@ -1,7 +1,3 @@
-def iif(cond, v_true, v_false):
-    return v_true if cond else v_false
-
-
 class Animal:
     def __init__(self, name, appetite, is_hungry=True):
         self.name = name
