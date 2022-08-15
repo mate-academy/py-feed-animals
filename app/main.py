@@ -24,7 +24,6 @@ class Cat(Animal):
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-        super().__init__(name, appetite, is_hungry)
 
         Cat.feed(self)
 
@@ -38,7 +37,6 @@ class Dog(Animal):
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-        super().__init__(name, appetite, is_hungry)
 
     @staticmethod
     def bring_slippers():
@@ -50,6 +48,5 @@ def feed_animals(list_of_animals):
     for i in list_of_animals:
         if i.is_hungry is True:
             sum_feed_points += i.appetite
-        if i.is_hungry is True:
             i.is_hungry = False
     return sum_feed_points
