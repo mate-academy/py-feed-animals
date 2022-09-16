@@ -25,7 +25,7 @@ class Cat(Animal):
         self.is_hungry = is_hungry
 
     def catch_mouse(self):
-        print('The hunt began!')
+        print("The hunt began!")
 
 
 class Dog(Animal):
@@ -36,7 +36,7 @@ class Dog(Animal):
         self.is_hungry = is_hungry
 
     def bring_slippers(self):
-        print('The slippers delivered!')
+        print("The slippers delivered!")
 
 
 def feed_animals(list):
