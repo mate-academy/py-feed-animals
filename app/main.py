@@ -35,7 +35,7 @@ class Dog(Animal):
                          appetite=7,
                          is_hungry=is_hungry)
 
-    def bring_slippers(self):
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
