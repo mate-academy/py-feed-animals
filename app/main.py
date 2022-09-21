@@ -37,5 +37,8 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers():
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
 
+
+def feed_animals(list_of_animals: list) -> int:
+    return sum((animal.feed() for animal in list_of_animals))
