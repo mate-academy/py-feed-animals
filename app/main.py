@@ -37,6 +37,6 @@ def feed_animals(animals):
     result = 0
     for animal in animals:
         if animal.is_hungry:
-            result += animal.appetite
+            result += animal.feed()
             animal.is_hungry = False
     return result
