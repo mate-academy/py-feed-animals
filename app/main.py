@@ -27,7 +27,7 @@ class Cat(Animal):
         self.is_hungry = is_hungry
 
     @staticmethod
-    def catch_mouse():
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
