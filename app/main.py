@@ -1,4 +1,4 @@
-#  write your code here
+
 class Animal:
 
     def __init__(
@@ -28,8 +28,7 @@ class Cat(Animal):
             self,
             name: str,
             appetite: int = 3,
-            is_hungry:
-            bool = True
+            is_hungry: bool = True
     ) -> None:
         super().__init__(name, appetite, is_hungry)
         self.name = name
