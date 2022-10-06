@@ -44,5 +44,5 @@ class Dog(Animal):
 def feed_animals(list_animals: list[Animal]) -> int:
     food_points = []
     for animal in list_animals:
-        food_points.append(Animal.feed(animal))
+        food_points.append(animal.feed())
     return sum(food_points)
