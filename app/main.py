@@ -20,5 +20,9 @@ class Animal:
             return 0
 
 
+class Cat(Animal):
 
-            
+    def __init__(self, name: str,
+                       appetite: int=3,
+                       is_hungry: bool=True) -> None:
+        super().__init__(name, appetite=3, is_hungry=True)
