@@ -21,11 +21,11 @@ class Animal:
 
 
 class Cat(Animal):
-
-    def __init__(self, name: str,
-                 is_hungry: bool=True) -> None:
-        super().__init__(name, is_hungry)
-        self.appetite =3
+    def __init__(self,
+                 name: str,
+                 appetite: int = 3,
+                 is_hungry: bool = True) -> None:
+        super().__init__(name, appetite, is_hungry)
 
     def catch_mouse(self):
         print("The hunt began!")
