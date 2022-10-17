@@ -26,3 +26,6 @@ class Cat(Animal):
                        appetite: int=3,
                        is_hungry: bool=True) -> None:
         super().__init__(name, appetite=3, is_hungry=True)
+
+    def catch_mouse(self):
+        print("The hunt began!")
