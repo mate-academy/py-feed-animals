@@ -34,6 +34,9 @@ class Dog(Animal):
                  is_hungry: bool = True) -> None:
         super().__init__(name, appetite, is_hungry)
 
-    def bring_slippers(self):
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
+def feed_animals(list_of_animal: list) -> int:
+    return sum([animal.appetite for animal
+                in list_of_animal if animal.appetite > 0])
