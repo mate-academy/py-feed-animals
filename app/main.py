@@ -10,12 +10,12 @@ class Animal:
     def print_name(self):
         print(f"Hello, I'm {self.name}")
 
-        def feed(self) -> int:
-            if self.is_hungry:
-                print(f"Eating {self.appetite} food points...")
-                self.is_hungry = not self.is_hungry
-                return self.appetite
-            return 0
+    def feed(self) -> int:
+        if self.is_hungry:
+            print(f"Eating {self.appetite} food points...")
+            self.is_hungry = not self.is_hungry
+            return self.appetite
+        return 0
 
 
 class Cat(Animal):
