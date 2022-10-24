@@ -16,6 +16,7 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             return self.appetite
         self.appetite = 0
+
         return self.appetite
 
 
@@ -44,4 +45,5 @@ def feed_animals(animals: list) -> int:
     for animal in animals:
         animal.feed()
         total += animal.appetite
+
     return total
