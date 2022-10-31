@@ -39,6 +39,5 @@ class Dog(Animal):
 def feed_animals(animals: list | Animal) -> int:
     result = 0
     for animal in animals:
-        food_points = animal.feed()
-        result += food_points
+        result += animal.feed()
     return result
