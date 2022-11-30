@@ -47,5 +47,3 @@ def feed_animals(list_of_animal: list) -> int:
         print(anim.name)
         result += Animal.feed(anim)
     return result
-
-
