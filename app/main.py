@@ -3,7 +3,7 @@ from __future__ import annotations
 
 class Animal:
     def __init__(self, name: str,
-                 appetite: int = 0,
+                 appetite: int,
                  is_hungry: bool = True) -> None:
         self.name = name
         self.is_hungry = is_hungry
@@ -17,15 +17,14 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        self.appetite = 0
-        return self.appetite
+
+        return 0
 
 
 class Cat(Animal):
     def __init__(self, name: str,
                  is_hungry: bool = True,
                  appetite: int = 3) -> None:
-        appetite = 3
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
@@ -37,7 +36,6 @@ class Dog(Animal):
     def __init__(self, name: str,
                  is_hungry: bool = True,
                  appetite: int = 7) -> None:
-        appetite = 7
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
@@ -46,8 +44,8 @@ class Dog(Animal):
 
 
 def feed_animals(lst_animals: list[Animal]) -> int:
-    result = 0
+    result = []
     for animal in lst_animals:
-        result += animal.feed()
+        result.append(animal.feed())
 
-    return result
+    return sum(result)
