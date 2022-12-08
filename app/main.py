@@ -61,9 +61,3 @@ def feed_animals(animal_list: list[Animal]) -> int:
     return sum(
         [animal.feed() for animal in animal_list if animal.is_hungry is True]
     )
-
-
-cat = Cat("Cat", False)
-lion = Animal("Lion", 25, True)
-dog = Dog("Dog")
-print(feed_animals([cat, lion, dog]))
