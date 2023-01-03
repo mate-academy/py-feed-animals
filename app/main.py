@@ -54,6 +54,5 @@ def feed_animals(list_animals: list) -> int:
     result = 0
     for animal in list_animals:
         if animal.is_hungry:
-            result += animal.appetite
-            animal.feed()
+            result += animal.feed()
     return result
