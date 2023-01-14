@@ -40,7 +40,8 @@ class Dog(Animal):
             self,
             name: str,
             appetite: int = 7,
-            is_hungry: bool = True) -> None:
+            is_hungry: bool = True
+    ) -> None:
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
