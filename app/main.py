@@ -48,10 +48,9 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     appetit_animals = 0
     for animal in animals:
-        if isinstance(animal, Animal):
-            appetit_animals += animal.feed()
-            Animal.feed(animal)
+        appetit_animals += animal.feed()
+        Animal.feed(animal)
     return appetit_animals
