@@ -12,10 +12,6 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def feed_animals(self, animals: list[Animal]) -> int:
-        return sum([animal.appetite for animal in animals
-                    if animal.is_hungry is True])
-
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
