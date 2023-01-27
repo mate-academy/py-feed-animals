@@ -47,7 +47,7 @@ cat2 = Cat("Cat", False)
 print(cat2.feed())  # 0
 cat2.catch_mouse()  # "The hunt began!"
 ```
-
+:
 The last class you should implement is a `Dog` class.
 Its constructor should have two arguments:
 * `name` - the name of a dog
