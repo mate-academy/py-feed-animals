@@ -32,7 +32,6 @@ class Cat(Animal):
     ) -> None:
         super().__init__(name, appetite, is_hungry)
 
-
     @staticmethod
     def catch_mouse() -> None:
         print("The hunt began!")
@@ -46,7 +45,6 @@ class Dog(Animal):
             is_hungry: bool = True
     ) -> None:
         super().__init__(name, appetite, is_hungry)
-
 
     @staticmethod
     def bring_slippers() -> None:
