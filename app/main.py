@@ -25,8 +25,6 @@ class Animal:
 class Cat(Animal):
 
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        # self.name = name
-        # self.is_hungry = is_hungry
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
