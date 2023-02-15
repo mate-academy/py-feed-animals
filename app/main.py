@@ -42,5 +42,5 @@ def feed_animals(animals: list) -> int:
 
         animal.feed()
         for animal in animals
-        if animal.is_hungry is True
+
     )
