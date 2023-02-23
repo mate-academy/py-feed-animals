@@ -81,7 +81,7 @@ def test_animal_feed_method(name, appetite, output):
     animal = main.Animal(name, appetite)
     f = io.StringIO()
     with redirect_stdout(f):
-        assert animal.feed() == appetite
+        assert animal.feed == appetite
     assert f.getvalue() == output
 
 
@@ -90,7 +90,7 @@ def test_animal_feed_not_hungry_animal():
 
     f = io.StringIO()
     with redirect_stdout(f):
-        feed_points = lion.feed()
+        feed_points = lion.feed
 
     assert f.getvalue() == "", (
         "Method 'feed' should not print anything for non-hungry animal."
@@ -129,7 +129,7 @@ def test_cat_feed_method(name, output):
     cat = main.Cat(name)
     f = io.StringIO()
     with redirect_stdout(f):
-        assert cat.feed() == 3
+        assert cat.feed == 3
     assert f.getvalue() == output
 
 
@@ -161,7 +161,7 @@ def test_dog_feed_method(name, output):
     dog = main.Dog(name)
     f = io.StringIO()
     with redirect_stdout(f):
-        assert dog.feed() == 7
+        assert dog.feed == 7
     assert f.getvalue() == output
 
 
