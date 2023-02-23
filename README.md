@@ -4,7 +4,7 @@
 before starting.
 
 All animals love delicious food. Let's create a new class to feed them.
-Create class `Animal` which constructor takes three arguments:
+Create class `Animal` which `__init__` method takes three arguments:
 * `name` - the animal name
 * `appetite` - an integer that shows how much *food points* this animal need to eat to be full.
 * `is_hungry` - boolean that shows if animal is ready to eat with `True` default value.
@@ -28,11 +28,11 @@ print(lion.feed())  # 0
 There is a well-known fact that all cats eat 3 food points at a time.
 Also, they can catch a mouse.
 Write `Cat` class which is a child of `Animal`. 
-It should have a constructor with two arguments:
+It should have the `__init__` method with two arguments:
 * `name` - the name of a cat
 * `is_hungry` - with `True` default value
 
-Note: you need call the super class constructor with `appetite` equal to 3.
+Note: you need call the super class `__init__` method with `appetite` equal to 3.
 
 `Cat` should have only one additional method `catch_mouse` which should print 
 `The hunt began!`
@@ -49,7 +49,7 @@ cat2.catch_mouse()  # "The hunt began!"
 ```
 
 The last class you should implement is a `Dog` class.
-Its constructor should have two arguments:
+Its `__init__` method should have two arguments:
 * `name` - the name of a dog
 * `is_hungry` - with `True` default value
 
