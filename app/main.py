@@ -40,5 +40,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: list[str]) -> int:
     return sum(animal.feed() for animal in animals)
