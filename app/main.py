@@ -1,1 +1,50 @@
-#  write your code here
+from __future__ import annotations
+
+
+class Animal:
+    alive = []
+
+    def __init__(self, name: str, appetite: int, is_hungry: bool = True)\
+            -> None:
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry
+
+    def print_name(self) -> None:
+        print(f"Hello, I'm {self.name}")
+
+    def feed(self) -> int:
+        if self.is_hungry:
+            result = self.appetite
+            print(f"Eating {self.appetite} food points...")
+            self.is_hungry = False
+            self.appetite = 0
+            return result
+        return 0
+
+
+class Cat(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        appetite = 3
+        super().__init__(name, appetite, is_hungry)
+
+    @staticmethod
+    def catch_mouse() -> None:
+        print("The hunt began!")
+
+
+class Dog(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        appetite = 7
+        super().__init__(name, appetite, is_hungry)
+
+    @staticmethod
+    def bring_slippers() -> None:
+        print("The slippers delivered!")
+
+
+def feed_animals(animals: list) -> int:
+    result = 0
+    for animal in animals:
+        result += animal.feed()
+    return result
