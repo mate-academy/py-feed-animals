@@ -57,10 +57,10 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(list_of_animals: list[Animal]) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     result = 0
-    for point_of_food in list_of_animals:
-        point_of_food.feed()
-        result += point_of_food.appetite
+    for food in animals:
+        food.feed()
+        result += food.appetite
 
     return result
