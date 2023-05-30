@@ -24,7 +24,7 @@ class Cat(Animal):
 
     @staticmethod
     def catch_mouse() -> None:
-        print(f"The hunt began!")
+        print("The hunt began!")
 
 
 class Dog(Animal):
@@ -33,7 +33,7 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers() -> None:
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
 
 
 def feed_animals(animals: list[Animal]) -> int:
