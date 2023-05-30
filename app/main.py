@@ -1,6 +1,3 @@
-from typing import Union
-
-
 class Animal:
 
     def __init__(
@@ -46,8 +43,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animal_list: list[Union[Animal, Cat, Dog]]) -> int:
-    feed_sum = 0
-    for animal in animal_list:
-        feed_sum += animal.feed()
-    return feed_sum
+def feed_animals(animal_list: list[Animal]) -> int:
+    return sum([animal.feed() for animal in animal_list])
