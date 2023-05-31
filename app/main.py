@@ -24,7 +24,7 @@ class Animal:
 
         if self.is_hungry is False:
             self.appetite = 0
-            return self.appetite
+            return 0
 
 
 class Cat(Animal):
@@ -34,8 +34,7 @@ class Cat(Animal):
             appetite: int = 3,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, appetite)
-        self.is_hungry = is_hungry
+        super().__init__(name, appetite, is_hungry)
 
     @staticmethod
     def catch_mouse() -> None:
@@ -49,8 +48,7 @@ class Dog(Animal):
             appetite: int = 7,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, appetite)
-        self.is_hungry = is_hungry
+        super().__init__(name, appetite, is_hungry)
 
     @staticmethod
     def bring_slippers() -> None:
