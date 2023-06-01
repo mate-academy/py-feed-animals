@@ -44,4 +44,5 @@ def feed_animals(animals: list[Animal]) -> int:
     result = 0
     for animal in animals:
         result += animal.feed()
+
     return result
