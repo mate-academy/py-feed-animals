@@ -60,6 +60,7 @@ All dogs should have `appetite` equal to 7.
 `The slippers delivered!`
 
 Example:
+
 ```python
 dog = Dog("Dog")
 dog.print_name()  # "Hello, I'm Dog"
@@ -67,7 +68,7 @@ dog.feed()  # "Eating 7 food points"
 
 dog2 = Dog("Dog", False)
 print(dog2.feed())  # 0
-dog2.bring_slippers()  # "The slippers delivered!"
+bring_slippers()  # "The slippers delivered!"
 ```
 
 Now, it's time to feed many animals at a time.
