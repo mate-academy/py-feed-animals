@@ -10,7 +10,7 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self) -> str:
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
@@ -46,8 +46,8 @@ class Dog(Animal):
 
 def feed_animals(animal_species: list) -> int:
     suma_of_appetite = 0
-    for instanc in animal_species:
-        if instanc.is_hungry:
-            suma_of_appetite += instanc.appetite
-            Animal.feed(instanc)
+    for instance_of_animal in animal_species:
+        if instance_of_animal.is_hungry:
+            suma_of_appetite += instance_of_animal.appetite
+            Animal.feed(instance_of_animal)
     return suma_of_appetite
