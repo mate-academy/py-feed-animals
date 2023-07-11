@@ -11,18 +11,18 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        if self.appetite and self.is_hungry:
+        if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
-            points = self.appetite
-            self.appetite = 0
-            return points
+            return self.appetite
         return 0
 
 
 class Cat(Animal):
-    def __init__(self, name: str, is_hungry: bool = True,
-                 appetite: int = 3) -> None:
+    def __init__(self, name: str,
+                 appetite: int = 3,
+                 is_hungry: bool = True
+                 ) -> None:
         super().__init__(name=name,
                          is_hungry=is_hungry,
                          appetite=appetite)
@@ -33,8 +33,10 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self, name: str, is_hungry: bool = True,
-                 appetite: int = 7) -> None:
+    def __init__(self, name: str,
+                 appetite: int = 7,
+                 is_hungry: bool = True
+                 ) -> None:
         super().__init__(name=name,
                          is_hungry=is_hungry,
                          appetite=appetite)
