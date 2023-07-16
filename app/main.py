@@ -1,6 +1,6 @@
 class Animal:
     def __init__(self,
-                 name:str,
+                 name: str,
                  appetite: int = 0,
                  is_hungry: bool = True
                  ) -> None:
@@ -13,8 +13,7 @@ class Animal:
         self.is_hungry = False
         return self.appetite
 
-    @staticmethod
-    def print_name() -> None:
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
 
