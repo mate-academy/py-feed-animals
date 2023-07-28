@@ -1,5 +1,5 @@
 class Animal:
-    def __init__(self, name: str, appetite: str,
+    def __init__(self, name: str, appetite: int,
                  is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
@@ -21,7 +21,8 @@ class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
-    def catch_mouse(self) -> str:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -29,11 +30,11 @@ class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, appetite=7, is_hungry=is_hungry)
 
-    def bring_slippers(self) -> str:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    total_food_points = 0
     total_food_points = sum(animal.feed() for animal in animals)
-        return total_food_points
+    return total_food_points
