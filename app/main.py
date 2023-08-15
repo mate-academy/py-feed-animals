@@ -1,5 +1,4 @@
 class Animal:
-    animal_list = []
 
     def __init__(
         self,
@@ -10,7 +9,6 @@ class Animal:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-        self.animal_list.append(self)
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
@@ -39,6 +37,6 @@ class Dog(Animal):
         print("The sleepers delivered!")
 
 
-def feed_animals(animal_list: list[Animal]) -> int:
-    total_food = sum(animal.feed() for animal in animal_list)
+def feed_animals(animals: list[Animal]) -> int:
+    total_food = sum(animal.feed() for animal in animals)
     return total_food
