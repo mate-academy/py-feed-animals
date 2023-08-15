@@ -178,7 +178,7 @@ def test_dog_bring_slippers_method():
     f = io.StringIO()
     with redirect_stdout(f):
         dog.bring_slippers()
-    assert f.getvalue() == "The sleepers delivered!\n"
+    assert f.getvalue() == "The slippers delivered!\n"
 
 
 @pytest.mark.parametrize(
