@@ -36,8 +36,9 @@ class Dog(Animal):
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
+
 def feed_animals(animals: list[Animal]) -> int:
-    sum = 0
+    sumation = 0
     for item in animals:
-        sum += item.appetite
-    return sum
+        sumation += item.appetite
+    return sumation
