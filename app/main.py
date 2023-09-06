@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
     def __init__(self, name: str, appetite: int,
                  is_hungry: bool = True) -> None:
@@ -13,6 +16,8 @@ class Animal:
             self.is_hungry = False
             print(f"Eating {self.appetite} food points...")
             return self.appetite
+
+        return 0
 
 
 class Cat(Animal):
