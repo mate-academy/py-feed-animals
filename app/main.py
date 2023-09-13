@@ -14,18 +14,16 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        upd_appetite = self.appetite
         if self.is_hungry is True:
             self.is_hungry = not self.is_hungry
             print(f"Eating {self.appetite} food points...")
-            self.appetite = 0
-            return upd_appetite
+            return self.appetite
         return 0
 
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=3, is_hungry=is_hungry)
+        super().__init__(name=name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
     def catch_mouse() -> None:
@@ -34,7 +32,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=7, is_hungry=is_hungry)
+        super().__init__(name=name, appetite=7, is_hungry=is_hungry)
 
     @staticmethod
     def bring_slippers() -> None:
@@ -42,9 +40,5 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    sum_of_appetite = sum(
-        [animal.appetite for animal in animals if animal.is_hungry is True]
-    )
-    for animal in animals:
-        animal.feed()
+    sum_of_appetite = sum(animal.feed() for animal in animals)
     return sum_of_appetite
