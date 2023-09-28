@@ -50,9 +50,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(all_animals: list[Cat | Dog | Animal | int]) -> int:
+def feed_animals(all_animals: list[Animal]) -> int:
 
-    food_point = 0
-    for one_animal in all_animals:
-        food_point += one_animal.feed()
+    food_point = sum([one_animal.feed() for one_animal in all_animals])
     return food_point
