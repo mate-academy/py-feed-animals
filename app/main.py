@@ -40,7 +40,8 @@ class Dog(Animal):
     ) -> None:
         super().__init__(name, appetite=7, is_hungry=is_hungry)
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
