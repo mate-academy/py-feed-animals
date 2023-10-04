@@ -1,3 +1,6 @@
+from functools import partial
+
+
 class Animal:
     """
     Represents a basic Animal creature.
@@ -59,8 +62,7 @@ class Cat(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name=name, appetite=3)
-        self.is_hungry = is_hungry
+        super().__init__(name=name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
     def catch_mouse() -> None:
@@ -77,11 +79,12 @@ class Dog(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, is_hungry)
+        super_init = partial(super().__init__, name=name, is_hungry=is_hungry)
+
         if is_hungry:
-            self.appetite = 7
+            super_init(appetite=7)
         else:
-            self.appetite = 0
+            super_init(appetite=0)
 
     @staticmethod
     def bring_slippers() -> None:
