@@ -24,7 +24,8 @@ class Cat(Animal):
         self.name = name
         self.is_hungry = is_hungry
 
-    def catch_mouse(self) -> None:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -35,14 +36,10 @@ class Dog(Animal):
         self.name = name
         self.is_hungry = is_hungry
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
 def feed_animals(animal_list: list) -> int:
-    total_appetite = 0
-    for animal in animal_list:
-        if animal.is_hungry:
-            animal.feed()
-            total_appetite += animal.appetite
-    return total_appetite
+    return sum(animal.feed() for animal in animal_list)
