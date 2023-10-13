@@ -28,8 +28,7 @@ class Cat(Animal):
         self.name = name
         self.is_hungry = is_hungry
 
-    @staticmethod
-    def catch_mouse() -> None:
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
@@ -42,8 +41,7 @@ class Dog(Animal):
         self.name = name
         self.is_hungry = is_hungry
 
-    @staticmethod
-    def bring_slippers() -> None:
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
