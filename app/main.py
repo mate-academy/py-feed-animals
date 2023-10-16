@@ -18,7 +18,7 @@ class Animal:
         return 0
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
 
 
