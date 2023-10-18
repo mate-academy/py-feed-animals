@@ -46,7 +46,7 @@ cat.feed()  # "Eating 3 food points"
 
 cat2 = Cat("Cat", False)
 print(cat2.feed())  # 0
-catch_mouse()  # "The hunt began!"
+cat2.catch_mouse()  # "The hunt began!"
 ```
 
 The last class you should implement is a `Dog` class.
