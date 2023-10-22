@@ -19,3 +19,14 @@ class Animal:
         print(f"Eating {self.appetite} food points...")
         self.is_hungry = False
         return self.appetite
+
+
+class Cat(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        self.name = name
+        self.is_hungry = is_hungry
+        super().__init__(name, 3, is_hungry)
+
+    @staticmethod
+    def catch_mouse() -> None:
+        print("The hunt began!")
