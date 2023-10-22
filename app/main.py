@@ -41,3 +41,10 @@ class Dog(Animal):
     @staticmethod
     def bring_slippers() -> None:
         print("The slippers delivered!")
+
+
+def feed_animals(hungry_animals: list[Animal]) -> int:
+    food_amount = 0
+    for animal in hungry_animals:
+        food_amount += animal.feed()
+    return food_amount
