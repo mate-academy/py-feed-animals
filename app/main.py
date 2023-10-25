@@ -38,5 +38,5 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list) -> int:
-    foods = [animal.feed() for animal in animals git ]
+    foods = [animal.feed() for animal in animals]
     return sum(foods)
