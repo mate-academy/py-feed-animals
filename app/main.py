@@ -25,8 +25,7 @@ class Cat(Animal):
         super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
-        if isinstance(self, Cat):
-            print("The hunt began!")
+        print("The hunt began!")
 
 
 class Dog(Animal):
@@ -41,8 +40,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list) -> int:
-    food_points = 0
-    for animal in animals:
-        food_points += animal.feed()
-
-    return food_points
+    return sum(animal.feed() for animal in animals)
