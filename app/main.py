@@ -17,16 +17,12 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0
 
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, is_hungry)
-        self.name = name
-        self.appetite = 3
-        self.is_hungry = is_hungry
+        super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
         if isinstance(self, Cat):
