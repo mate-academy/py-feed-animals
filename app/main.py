@@ -1,5 +1,4 @@
 class Animal:
-
     def __init__(
             self,
             name: str,
@@ -22,7 +21,6 @@ class Animal:
 
 
 class Cat(Animal):
-
     def __init__(
             self,
             name: str,
@@ -38,7 +36,6 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-
     def __init__(
             self,
             name: str,
@@ -53,9 +50,9 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list) -> int:
-    result = []
-    for animal in animals:
-        if isinstance(animal, Animal) and animal.is_hungry is True:
-            animal.feed()
-            result.append(animal.appetite)
-    return sum(result)
+    return sum(
+        [animal.appetite
+         and animal.feed()
+         for animal in animals if isinstance(animal, Animal)
+         and animal.is_hungry is True]
+    )
