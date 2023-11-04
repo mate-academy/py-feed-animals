@@ -1,9 +1,12 @@
+from typing import Optional
+
+
 class Animal:
     def __init__(
             self,
             name: str,
             appetite: int,
-            is_hungry: bool = True
+            is_hungry: Optional[bool] = True
     ) -> None:
         self.name = name
         self.appetite = appetite
@@ -26,7 +29,7 @@ class Cat(Animal):
     def __init__(
             self,
             name: str,
-            is_hungry: bool = True
+            is_hungry: Optional[bool] = True
     ) -> None:
         super().__init__(
             name,
@@ -42,8 +45,7 @@ class Dog(Animal):
     def __init__(
             self,
             name: str,
-            is_hungry:
-            bool = True
+            is_hungry: Optional[bool] = True
     ) -> None:
         super().__init__(
             name,
