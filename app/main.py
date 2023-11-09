@@ -30,7 +30,7 @@ class Cat(Animal):
         super().__init__(name, 3, is_hungry)
 
     @staticmethod
-    def catch_mouse():
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -43,11 +43,11 @@ class Dog(Animal):
         super().__init__(name, 7, is_hungry)
 
     @staticmethod
-    def bring_slippers():
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list[Animal]):
+def feed_animals(animals: list[Animal]) -> int:
     feed_points_sum = 0
 
     for animal in [animal for animal in animals
