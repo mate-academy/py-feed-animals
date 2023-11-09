@@ -29,7 +29,7 @@ class Cat(Animal):
                  ) -> None:
         super().__init__(name, 3, is_hungry)
 
-    def catch_mouse() -> None:
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
@@ -41,7 +41,7 @@ class Dog(Animal):
                  ) -> None:
         super().__init__(name, 7, is_hungry)
 
-    def bring_slippers() -> None:
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
