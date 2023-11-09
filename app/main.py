@@ -47,12 +47,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list[Animal]):
-    feed_points_sum = 0
-
-    for animal in [animal for animal in animals
-                   if animal.is_hungry]:
-        animal.feed()
-        feed_points_sum += animal.appetite
-
-    return feed_points_sum
+def feed_animals(animals: list[Animal]) -> int:
+    return sum(animal.feed() for animal in animals)
