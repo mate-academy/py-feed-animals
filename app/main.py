@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 class Animal:
     """
     All animals love delicious food. Let's create a new class to feed them.
@@ -38,19 +35,6 @@ class Animal:
 
 
 class Cat(Animal):
-    """
-    There is a well-known fact that all cats eat 3 food points at a time.
-    Also, they can catch a mouse. Write Cat class which is a child of Animal.
-    It should have the __init__ method with two arguments:
-
-    name - the name of a cat
-    is_hungry - with True default value
-    Note: you need call the super class __init__ method with appetite
-    equal to 3.
-
-    Cat should have only one additional method catch_mouse which should print
-    The hunt began!
-    """
     def __init__(
             self,
             name: str,
@@ -63,18 +47,6 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    """
-    The last class you should implement is a Dog class. Its __init__ method
-    should have two arguments:
-
-    name - the name of a dog
-    is_hungry - with True default value
-    All dogs should have appetite equal to 7.
-
-    Dog should have one additional method bring_slippers that should print
-    The slippers delivered!
-    """
-
     def __init__(
             self,
             name: str,
