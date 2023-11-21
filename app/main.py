@@ -1,4 +1,4 @@
-from typing import List
+from __future__ import annotations
 
 
 class Animal:
@@ -8,20 +8,19 @@ class Animal:
             appetite: int,
             is_hungry: bool = True
     ) -> None:
-        self.name: str = name
-        self.appetite: int = appetite
-        self.is_hungry: bool = is_hungry
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        if self.is_hungry:
-            print(f"Eating {self.appetite} food points...")
-            self.is_hungry = False
-            return self.appetite
-        else:
+        if not self.is_hungry:
             return 0
+        print(f"Eating {self.appetite} food points...")
+        self.is_hungry = False
+        return self.appetite
 
 
 class Cat(Animal):
@@ -30,9 +29,10 @@ class Cat(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, 3, is_hungry)
+        super().__init__(name, 3, is_hungry=is_hungry)
 
-    def catch_mouse(self) -> None:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -42,14 +42,12 @@ class Dog(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, 7, is_hungry)
+        super().__init__(name, 7, is_hungry=is_hungry)
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
-def feed_animals(animals: List[Animal]) -> int:
-    total_food_points: int = 0
-    for animal in animals:
-        total_food_points += animal.feed()
-    return total_food_points
+def feed_animals(animals: list[Animal]) -> int:
+    return sum(animal.feed() for animal in animals)
