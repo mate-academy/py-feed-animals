@@ -41,10 +41,12 @@ Example:
 ```python
 cat = Cat("Cat")
 cat.print_name()  # "Hello, I'm Cat"
-cat.feed()  # "Eating 3 food points"
-
+print(cat.is_hungry)
+print(cat.feed())  # "Eating 3 food points"
+print(cat.is_hungry)
 cat2 = Cat("Cat", False)
 print(cat2.feed())  # 0
+
 cat2.catch_mouse()  # "The hunt began!"
 ```
 
@@ -79,7 +81,7 @@ Example:
 cat = Cat("Cat", False)
 lion = Animal("Lion", 25, True)
 dog = Dog("Dog")
-feed_animals([cat, lion, dog]) == 32
+print(feed_animals([cat, lion, dog]) == 32)
 ```
 
 ### Note: Check your code using this [checklist](checklist.md) before pushing your solution.
