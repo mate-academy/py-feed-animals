@@ -28,7 +28,6 @@ class Cat(Animal):
             appetite: int = 3,
             is_hungry: bool = True
     ) -> None:
-        self.appetite = appetite
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
@@ -43,7 +42,6 @@ class Dog(Animal):
             appetite: int = 7,
             is_hungry: bool = True
     ) -> None:
-        self.appetite = appetite
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
@@ -67,4 +65,4 @@ if __name__ == "__main__":
 
     animals = (cat, dog, pantera)
 
-    feed_animals(animals)
+    print(feed_animals(animals))
