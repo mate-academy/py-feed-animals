@@ -1,6 +1,7 @@
 #  write your code here
 class Animal:
-    def __init__(self,
+    def __init__(
+            self,
             name: str,
             appetite: int,
             is_hungry: bool = True
