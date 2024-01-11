@@ -41,7 +41,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: str) -> int:
-    return sum([animal.feed() if animals.count(animal) <= 1
-                else (animal.feed()
-                and setattr(animal, "is_hungry", True))
-                for animal in animals])
+    return sum([animal.feed() for animal in animals])
