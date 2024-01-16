@@ -42,4 +42,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    return sum(map(lambda animal: animal.feed(), animals))
+    return sum(Animal.feed(animal) for animal in animals)
