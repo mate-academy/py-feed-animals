@@ -14,12 +14,12 @@ class Animal:
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> Any:
+    def feed(self) -> int:
+        result = self.appetite if self.is_hungry else 0
         if self.is_hungry:
-            print(f"Eating {self.appetite} food points...")
+            print(f"Eating {result} food points...")
             self.is_hungry = False
-            return self.appetite
-        return 0
+        return result
 
 
 class Cat(Animal):
