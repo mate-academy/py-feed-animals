@@ -32,5 +32,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> None:
+def feed_animals(animals: list) -> list:
     return sum(animal.feed() for animal in animals)
