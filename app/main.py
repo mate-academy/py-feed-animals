@@ -1,6 +1,3 @@
-from typing import Any
-
-
 class Animal:
 
     def __init__(self,
@@ -14,17 +11,17 @@ class Animal:
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> Any:
+    def feed(self) -> int:
+        result = self.appetite if self.is_hungry else 0
         if self.is_hungry:
-            print(f"Eating {self.appetite} food points...")
+            print(f"Eating {result} food points...")
             self.is_hungry = False
-            return self.appetite
-        return 0
+        return result
 
 
 class Cat(Animal):
 
-    def __init__(self, name: str, is_hungry: bool = True) -> Any:
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 3, is_hungry)
 
     @staticmethod
@@ -34,7 +31,7 @@ class Cat(Animal):
 
 class Dog(Animal):
 
-    def __init__(self, name: str, is_hungry: bool = True) -> Any:
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 7, is_hungry)
 
     @staticmethod
