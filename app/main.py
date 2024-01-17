@@ -14,13 +14,13 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-
         food_point = 0
 
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             food_point = self.appetite
+
         return food_point
 
 
@@ -44,7 +44,6 @@ class Dog(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        # self.appetite = 7
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
@@ -52,5 +51,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals_list: list[Animal]) -> int:
-
     return sum(animal.feed() for animal in animals_list)
