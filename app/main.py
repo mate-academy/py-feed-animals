@@ -13,11 +13,11 @@ class Animal:
         self.is_hungry = is_hungry
 
     def print_name(self) -> None:
-        print(f'Hello, I\'m {self.name}')
+        print(f"Hello, I\'m {self.name}")
 
     def feed(self) -> int:
         if self.is_hungry:
-            print(f'Eating {self.appetite} food points...')
+            print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
         return 0
@@ -33,7 +33,7 @@ class Cat(Animal):
 
     @staticmethod
     def catch_mouse() -> None:
-        print('The hunt began!')
+        print("The hunt began!")
 
 
 class Dog(Animal):
@@ -46,7 +46,7 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers() -> None:
-        print('The slippers delivered!')
+        print("The slippers delivered!")
 
 
 def feed_animals(animals: list) -> int:
