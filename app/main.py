@@ -33,6 +33,13 @@ class Dog(Animal):
     def bring_slippers():
         print(f"The slippers delivered!")
 
+def feed_animals(animals: list[Animal]) -> int:
+    suma = 0
+    for animal in animals:
+        suma += animal.feed()
+    return suma
+
+
 
 
 
