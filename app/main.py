@@ -15,6 +15,7 @@ class Animal:
             return self.appetite
         return 0
 
+
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True):
         super().__init__(name, 3, is_hungry)
@@ -22,6 +23,15 @@ class Cat(Animal):
     @staticmethod
     def catch_mouse():
         print(f"The hunt began!")
+
+
+class Dog(Animal):
+    def __init__(self, name: str, is_hungry: bool = True):
+        super().__init__(name, 7, is_hungry)
+
+    @staticmethod
+    def bring_slippers():
+        print(f"The slippers delivered!")
 
 
 
