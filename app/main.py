@@ -6,7 +6,8 @@ class Animal:
                  name: str,
                  appetite: int = 0,
                  is_hungry:
-                 bool = True) -> None:
+                 bool = True
+                 ) -> None:
 
         self.name = name
         self.appetite = appetite
@@ -28,7 +29,8 @@ class Cat(Animal):
     def __init__(self,
                  name: str,
                  appetite: int = 3,
-                 is_hungry: bool = True) -> None:
+                 is_hungry: bool = True
+                 ) -> None:
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
@@ -40,7 +42,8 @@ class Dog(Animal):
     def __init__(self,
                  name: str,
                  appetite: int = 7,
-                 is_hungry: bool = True) -> None:
+                 is_hungry: bool = True
+                 ) -> None:
         super().__init__(name, appetite, is_hungry)
 
     @staticmethod
