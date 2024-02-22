@@ -2,7 +2,8 @@ from typing import Any
 
 
 class Animal:
-    def __init__(self,
+    def __init__(
+                 self,
                  name: str,
                  appetite: int = 0,
                  is_hungry:
@@ -26,7 +27,8 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self,
+    def __init__(
+                 self,
                  name: str,
                  appetite: int = 3,
                  is_hungry: bool = True
@@ -39,7 +41,8 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self,
+    def __init__(
+                 self,
                  name: str,
                  appetite: int = 7,
                  is_hungry: bool = True
