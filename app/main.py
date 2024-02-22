@@ -39,7 +39,6 @@ class Cat(Animal):
     @staticmethod
     def catch_mouse() -> None:
         print("The hunt began!")
-        pass
 
 
 class Dog(Animal):
@@ -53,19 +52,7 @@ class Dog(Animal):
     @staticmethod
     def bring_slippers() -> None:
         print("The slippers delivered!")
-        pass
 
 
 def feed_animals(lst: list) -> int:
-    total_amount = 0
-
-    for animal in lst:
-
-        total_amount += animal.feed()
-
-    return total_amount
-
-
-dog = Dog("Dog", False)
-dog.print_name()
-dog.feed()
+    return sum([animal.feed() for animal in lst])
