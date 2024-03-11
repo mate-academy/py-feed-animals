@@ -49,7 +49,11 @@ class Dog(Animal):
             appetite: int = 7,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, appetite, is_hungry)
+        super().__init__(
+            name,
+            appetite,
+            is_hungry
+        )
 
     @staticmethod
     def bring_slippers() -> None:
