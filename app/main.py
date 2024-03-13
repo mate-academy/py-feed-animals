@@ -2,7 +2,10 @@ from functools import reduce
 
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True):
+    def __init__(self,
+                 name: str,
+                 appetite: int,
+                 is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -10,7 +13,7 @@ class Animal:
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self):
+    def feed(self) -> int:
         if not self.appetite or not self.is_hungry:
             return 0
 
@@ -34,7 +37,7 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self, name: str, is_hungry: bool = True):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 7, is_hungry)
 
     @classmethod
@@ -42,5 +45,8 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list[Animal]):
-    return reduce(lambda previous_value, current_value: previous_value + current_value.feed(), animals, 0)
+def feed_animals(animals: list[Animal]) -> int:
+    return reduce(
+        lambda previous_value, current_value:
+        previous_value + current_value.feed(),
+        animals, 0)
