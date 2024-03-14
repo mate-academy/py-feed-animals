@@ -43,8 +43,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list) -> int:
-    food_counter = 0
-    for beast in animals:
-        if isinstance(beast, Animal):
-            food_counter += beast.feed()
-    return food_counter
+    return sum(beast.feed() for beast in animals)
