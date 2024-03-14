@@ -46,7 +46,9 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    return reduce(
-        lambda previous_value, current_value:
-        previous_value + current_value.feed(),
-        animals, 0)
+    food_points = 0
+
+    for animal in animals:
+        food_points += animal.feed()
+
+    return food_points
