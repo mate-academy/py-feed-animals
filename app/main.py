@@ -14,14 +14,12 @@ class Animal:
         if not self.appetite or not self.is_hungry:
             return 0
 
-        food_points_to_eat = self.appetite
-
-        print(f"Eating {food_points_to_eat} food points...")
+        print(f"Eating {self.appetite} food points...")
 
         self.is_hungry = False
-        self.appetite -= food_points_to_eat
+        self.appetite -= self.appetite
 
-        return food_points_to_eat
+        return self.appetite
 
 
 class Cat(Animal):
