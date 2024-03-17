@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
 
     animals_list = []
@@ -44,8 +47,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals_list: list) -> int:
-    feed = 0
-    for animal in animals_list:
-        feed += animal.feed()
-    return feed
+def feed_animals(animals_list: list[Animal]) -> int:
+    return sum([animal.feed() for animal in animals_list])
