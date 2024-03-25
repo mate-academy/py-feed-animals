@@ -45,14 +45,10 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list = None) -> int | str:
+def feed_animals(animals: list = None) -> str | int:
     if animals is None:
         return "No animals in list"
 
-    sum_of_points = 0
-
-    for animal in animals:
-        if isinstance(animal, Animal):
-            sum_of_points += animal.feed()
-
-    return sum_of_points
+    return sum(animal.feed()
+               for animal in animals
+               if isinstance(animal, Animal))
