@@ -29,8 +29,6 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        self.name = name
-        self.is_hungry = is_hungry
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
