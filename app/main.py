@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 class Animal:
     def __init__(self,
                  name: str,
@@ -45,7 +42,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list = None) -> str | int:
+def feed_animals(animals: list = None) -> str or int:
     if animals is None:
         return "No animals in list"
 
