@@ -29,16 +29,11 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        self.name = name
-        self.is_hungry = is_hungry
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> None:
-    total = 0
-    for animal in animals:
-        total += animal.feed()
-    return total
+def feed_animals(animals: list) -> int:
+    return sum(animal.feed() for animal in animals)
