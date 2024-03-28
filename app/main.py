@@ -42,10 +42,8 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list = None) -> str or int:
-    if animals is None:
-        return "No animals in list"
-
-    return sum(animal.feed()
-               for animal in animals
-               if isinstance(animal, Animal))
+def feed_animals(animals: list[Animal]) -> int:
+    return sum(
+        animal.feed() for animal in animals
+        if isinstance(animal, Animal)
+    )
