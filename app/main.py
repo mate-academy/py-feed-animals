@@ -1,8 +1,13 @@
+from typing import List
+
+
 class Animal:
-    def __init__(self,
-                 name: str,
-                 appetite: int,
-                 is_hungry: bool = True) -> None:
+    def __init__(
+            self,
+            name: str,
+            appetite: int,
+            is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -10,7 +15,7 @@ class Animal:
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> int | bool:
+    def feed(self) -> int:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = not self.is_hungry
@@ -36,5 +41,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: List[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
