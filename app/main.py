@@ -8,7 +8,7 @@ class Animal:
         self.is_hungry = is_hungry
 
     def print_name(self) -> None:
-        print(f"Hello, I\'m {self.name}")
+        print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
         self.is_hungry = not self.is_hungry
@@ -36,7 +36,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     result = 0
     for animal in animals:
         animal.feed()
