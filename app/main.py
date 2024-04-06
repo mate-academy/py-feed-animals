@@ -12,7 +12,7 @@ class Animal:
     def print_name(self) -> str:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> int | str:
+    def feed(self) -> int:
         if not self.is_hungry:
             return 0
         print(f"Eating {self.appetite} food points...")
