@@ -47,9 +47,3 @@ def feed_animals(animals_list: list) -> int:
             animal.feed()
             total_food_points += animal.appetite
     return total_food_points
-
-
-cat = Cat("Cat", False)
-lion = Animal("Lion", 25, True)
-dog = Dog("Dog")
-print(feed_animals([cat, lion, dog]))
