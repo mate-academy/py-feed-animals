@@ -41,9 +41,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals_list: list) -> int:
-    total_food_points = 0
-    for animal in animals_list:
-        if animal.is_hungry:
-            animal.feed()
-            total_food_points += animal.appetite
-    return total_food_points
+    return sum(animal.feed() for animal in animals_list if animal.is_hungry)
