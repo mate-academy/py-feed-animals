@@ -15,15 +15,12 @@ class Animal:
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> None | int:
+    def feed(self) -> int:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
-            if self in Animal.hungry_animals:
-                Animal.hungry_animals.remove(self)
             return self.appetite
-        else:
-            return 0
+        return 0
 
     @staticmethod
     def add_to_hungry(animal: list) -> None:
@@ -48,10 +45,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(hungry_animals: list) -> None:
-    needed_food = 0
-
-    for hungry_animal in hungry_animals:
-        needed_food += hungry_animal.feed()
-
-    return needed_food
+def feed_animals(hungry_animals: list) -> int:
+    return sum(hungry_animal.feed() for hungry_animal in hungry_animals)
