@@ -16,14 +16,13 @@ set `is_hungry` to `False` and return number of eaten food points if animal is h
 Otherwise, it should return 0 and print nothing.
 
 Example:
-
 ```python
 lion = Animal("Lion", 25)
 lion.print_name()  # "Hello, I'm Lion"
-food_points = lion.feed  # "Eating 25 food points..."
+food_points = lion.feed()  # "Eating 25 food points..."
 print(food_points)  # 25
 print(lion.is_hungry)  # False
-print(lion.feed)  # 0
+print(lion.feed())  # 0
 ```
 
 There is a well-known fact that all cats eat 3 food points at a time.
@@ -39,14 +38,13 @@ Note: you need call the super class `__init__` method with `appetite` equal to 3
 `The hunt began!`
 
 Example:
-
 ```python
 cat = Cat("Cat")
 cat.print_name()  # "Hello, I'm Cat"
-cat.feed  # "Eating 3 food points"
+cat.feed()  # "Eating 3 food points"
 
 cat2 = Cat("Cat", False)
-print(cat2.feed)  # 0
+print(cat2.feed())  # 0
 cat2.catch_mouse()  # "The hunt began!"
 ```
 
@@ -61,14 +59,13 @@ All dogs should have `appetite` equal to 7.
 `The slippers delivered!`
 
 Example:
-
 ```python
 dog = Dog("Dog")
 dog.print_name()  # "Hello, I'm Dog"
-dog.feed  # "Eating 7 food points"
+dog.feed()  # "Eating 7 food points"
 
 dog2 = Dog("Dog", False)
-print(dog2.feed)  # 0
+print(dog2.feed())  # 0
 dog2.bring_slippers()  # "The slippers delivered!"
 ```
 
