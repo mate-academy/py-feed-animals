@@ -1,4 +1,4 @@
-class Animal():
+class Animal:
     def __init__(self, name: str, appetite: int,
                  is_hungry: bool = True) -> None:
         self.name = name
@@ -24,7 +24,8 @@ class Cat(Animal):
         super().__init__(name, appetite=3)
         self.is_hungry = is_hungry
 
-    def catch_mouse(self) -> str:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -34,7 +35,8 @@ class Dog(Animal):
         super().__init__(name, appetite=7)
         self.is_hungry = is_hungry
 
-    def bring_slippers(self) -> str:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
