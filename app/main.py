@@ -2,7 +2,7 @@ class Animal:
 
     def __init__(self,
                  name: str,
-                 appetite: int,
+                 appetite: int = 1,
                  is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
@@ -20,16 +20,22 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=3, is_hungry=is_hungry)
+    def __init__(self,
+                 name: str,
+                 is_hungry: bool = True) -> None:
+        super().__init__(name, is_hungry=is_hungry)
+        self.appetite = 3
 
     def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
 class Dog(Animal):
-    def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=7, is_hungry=is_hungry)
+    def __init__(self,
+                 name: str,
+                 is_hungry: bool = True) -> None:
+        super().__init__(name, is_hungry=is_hungry)
+        self.appetite = 7
 
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
