@@ -1,9 +1,11 @@
 class Animal:
 
-    def __init__(self,
-                 name: str,
-                 appetite: int = 1,
-                 is_hungry: bool = True) -> None:
+    def __init__(
+        self,
+        name: str,
+        appetite: int = 1,
+        is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -20,9 +22,7 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self,
-                 name: str,
-                 is_hungry: bool = True) -> None:
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, is_hungry=is_hungry)
         self.appetite = 3
 
@@ -31,9 +31,7 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self,
-                 name: str,
-                 is_hungry: bool = True) -> None:
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, is_hungry=is_hungry)
         self.appetite = 7
 
