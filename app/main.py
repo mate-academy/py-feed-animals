@@ -39,7 +39,7 @@ class Dog(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        super().__init__(name, appetite=7, is_hungry=is_hungry)
+        super().__init__(name, appetite=7)
 
     @staticmethod
     def bring_slippers() -> None:
@@ -50,5 +50,4 @@ def feed_animals(list_of_animals: list) -> int:
     return sum([
         animal.feed()
         for animal in list_of_animals
-        if animal.is_hungry
     ])
