@@ -1,7 +1,4 @@
-from abc import ABC
-
-
-class Animal(ABC):
+class Animal:
     def __init__(
         self,
         name: str,
