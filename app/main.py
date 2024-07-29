@@ -13,10 +13,12 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        result = self.appetite if self.is_hungry else 0
         if self.is_hungry:
+            result = self.appetite
             print(f"Eating {result} food points...")
             self.is_hungry = False
+        else:
+            result = 0
         return result
 
 
