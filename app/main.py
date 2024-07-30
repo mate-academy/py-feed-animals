@@ -1,9 +1,10 @@
 class Animal:
-    def __init__(self,
-                 name: str,
-                 appetite: int,
-                 is_hungry: bool = True
-                 ) -> None:
+    def __init__(
+        self,
+        name: str,
+        appetite: int,
+        is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -16,16 +17,16 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0
 
 
 class Cat(Animal):
-    def __init__(self,
-                 name: str,
-                 is_hungry: bool = True,
-                 appetite: int = 3
-                 ) -> None:
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True,
+        appetite: int = 3
+    ) -> None:
         super().__init__(name, 3, is_hungry)
         self.appetite = appetite
 
@@ -35,11 +36,12 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self,
-                 name: str,
-                 is_hungry: bool = True,
-                 appetite: int = 7
-                 ) -> None:
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True,
+        appetite: int = 7
+    ) -> None:
         super().__init__(name, 7, is_hungry)
         self.appetite = appetite
 
@@ -49,8 +51,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    total_food_points = 0
-    for animal in animals:
-        if animal.is_hungry:
-            total_food_points += animal.feed()
-    return total_food_points
+    return sum(animal.feed() for animal in animals if animal.is_hungry)
