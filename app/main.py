@@ -17,13 +17,12 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0
 
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=3, is_hungry=is_hungry)
+        super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
         print("The hunt began!")
@@ -31,15 +30,11 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        super().__init__(name, appetite=7, is_hungry=is_hungry)
+        super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
 def feed_animals(animal_list: list) -> int:
-    total_food_points = 0
-    for animal in animal_list:
-        food_points = animal.feed()
-        total_food_points += food_points
-    return total_food_points
+    return sum(animal.feed() for animal in animal_list)
