@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Animal:
     def __init__(
             self, name: str, appetite: int, is_hungry: bool = True
@@ -35,7 +38,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: List) -> int:
     total_food = 0
     for animal in animals:
         total_food += animal.feed()
