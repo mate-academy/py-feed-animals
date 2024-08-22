@@ -33,18 +33,6 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> None:
-    total_food = 0
-    for animal in animals:
-        total_food += animal.feed()
-        animal.feed()
+def feed_animals(animals: list[Animal]) -> None:
+    total_food = sum([animal.feed() for animal in animals])
     return total_food
-
-
-elephant = Animal("Elephant", 100)
-rat = Animal("Rat", 1)
-lion = Animal("Lion", 25)
-cat = Cat("Cat", False)
-
-food_points = feed_animals([elephant, rat, lion, cat])
-print("food points:", food_points)
