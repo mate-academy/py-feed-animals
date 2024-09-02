@@ -38,7 +38,6 @@ Note: you need call the super class `__init__` method with `appetite` equal to 3
 `The hunt began!`
 
 Example:
-
 ```python
 cat = Cat("Cat")
 cat.print_name()  # "Hello, I'm Cat"
@@ -46,7 +45,7 @@ cat.feed()  # "Eating 3 food points"
 
 cat2 = Cat("Cat", False)
 print(cat2.feed())  # 0
-catch_mouse()  # "The hunt began!"
+cat2.catch_mouse()  # "The hunt began!"
 ```
 
 The last class you should implement is a `Dog` class.
@@ -60,7 +59,6 @@ All dogs should have `appetite` equal to 7.
 `The slippers delivered!`
 
 Example:
-
 ```python
 dog = Dog("Dog")
 dog.print_name()  # "Hello, I'm Dog"
@@ -68,7 +66,7 @@ dog.feed()  # "Eating 7 food points"
 
 dog2 = Dog("Dog", False)
 print(dog2.feed())  # 0
-bring_slippers()  # "The slippers delivered!"
+dog2.bring_slippers()  # "The slippers delivered!"
 ```
 
 Now, it's time to feed many animals at a time.
