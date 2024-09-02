@@ -166,7 +166,7 @@ def test_dog_feed_method(name, output):
 
 
 def test_cat_catch_method():
-    cat = main.Cat
+    cat = main.Cat("My cat")
     f = io.StringIO()
     with redirect_stdout(f):
         cat.catch_mouse()
@@ -174,7 +174,7 @@ def test_cat_catch_method():
 
 
 def test_dog_bring_slippers_method():
-    dog = main.Dog
+    dog = main.Dog("My dog")
     f = io.StringIO()
     with redirect_stdout(f):
         dog.bring_slippers()
