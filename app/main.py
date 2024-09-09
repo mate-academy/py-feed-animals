@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Animal:
     def __init__(
         self,
@@ -43,5 +46,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: List[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
