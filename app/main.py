@@ -1,9 +1,4 @@
-from __future__ import annotations
-
-
 class Animal:
-    animal_list = []
-
     def __init__(
             self,
             name: str,
@@ -13,7 +8,6 @@ class Animal:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-        Animal.animal_list.append(self)
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
