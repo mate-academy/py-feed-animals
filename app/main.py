@@ -19,8 +19,7 @@ class Animal:
 
             return self.appetite
 
-        else:
-            return 0
+        return 0
 
 
 class Cat(Animal):
@@ -42,8 +41,4 @@ class Dog(Animal):
 
 
 def feed_animals(other: list[Animal]) -> int:
-    summary = 0
-    for i in range(len(other)):
-        if isinstance(other[i], Animal):
-            summary += Animal.feed(other[i])
-    return summary
+    return sum(animal.feed() for animal in other if isinstance(animal, Animal))
