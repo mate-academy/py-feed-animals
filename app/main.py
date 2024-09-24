@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 class Animal:
 
     def __init__(self,
