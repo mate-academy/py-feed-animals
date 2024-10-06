@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
 
     def __init__(self,
@@ -41,5 +44,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: listp[Animal]) -> int:
     return sum(Animal.feed(animal) for animal in animals)
