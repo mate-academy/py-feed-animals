@@ -17,7 +17,7 @@ class Animal:
             self.appetite = 0
             self.is_hungry = False
             return result
-        else:
+        return 0
             return 0
 
 
