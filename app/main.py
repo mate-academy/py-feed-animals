@@ -2,18 +2,14 @@ from typing import List
 
 
 class Animal:
-    alive: List["Animal"] = []
-
     def __init__(
-            self,
-            name: str,
+            self, name: str,
             appetite: int,
             is_hungry: bool = True
     ) -> None:
         self.name: str = name
         self.appetite: int = appetite
         self.is_hungry: bool = is_hungry
-        Animal.alive.append(self)
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
@@ -30,7 +26,8 @@ class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
-    def catch_mouse(self) -> None:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -38,12 +35,13 @@ class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, appetite=7, is_hungry=is_hungry)
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
 def feed_animals(animals: List[Animal]) -> int:
-    total_food: int = 0
+    total_food_consumed: int = 0
     for animal in animals:
-        total_food += animal.feed()
-    return total_food
+        total_food_consumed += animal.feed()
+    return total_food_consumed
