@@ -18,7 +18,6 @@ class Animal:
             self.is_hungry = False
             return result
         return 0
-            return 0
 
 
 class Cat(Animal):
