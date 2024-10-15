@@ -20,7 +20,6 @@ class Animal:
             return self.appetite
         return 0
 
-
 class Cat(Animal):
     def __init__(self,
                  name: str,
@@ -42,4 +41,5 @@ class Dog(Animal):
 
 
 def feed_animals(animals: List[Animal]) -> int:
-    return sum(animal.feed() for animal in animals)
+    total_food_points = sum([animal.feed() for animal in animals])
+    return total_food_points
