@@ -20,6 +20,7 @@ class Animal:
             return self.appetite
         return 0
 
+
 class Cat(Animal):
     def __init__(self,
                  name: str,
