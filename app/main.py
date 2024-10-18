@@ -14,11 +14,11 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self):
+    def print_name(self) -> None:
         """Function that prints information about animal name."""
         print(f"Hello, I'm {self.name}")
 
-    def feed(self):
+    def feed(self) -> int:
         """Function for eating given number of point."""
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
@@ -33,7 +33,7 @@ class Cat(Animal):
         super().__init__(name=name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
-    def catch_mouse():
+    def catch_mouse() -> None:
         """Function to inform about catching mouse."""
         print("The hunt began!")
 
@@ -43,7 +43,7 @@ class Dog(Animal):
         super().__init__(name=name, appetite=7, is_hungry=is_hungry)
 
     @staticmethod
-    def bring_slippers():
+    def bring_slippers() -> None:
         """Function to inform about bringing slippers."""
         print("The slippers delivered!")
 
