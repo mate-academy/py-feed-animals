@@ -1,4 +1,20 @@
-from animal.animal import Animal
+class Animal:
+    def __init__(
+        self, name: str, appetite: int, is_hungry: bool = True
+    ) -> None:
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry
+
+    def print_name(self) -> None:
+        print(f"Hello, I'm {self.name}")
+
+    def feed(self) -> int:
+        if self.is_hungry:
+            print(f"Eating {self.appetite} food points...")
+            self.is_hungry = False
+            return self.appetite
+        return 0
 
 
 class Cat(Animal):
@@ -19,10 +35,5 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list[Animal]) -> None:
-    food_points = 0
-    for animal in animals:
-        if animal.is_hungry:
-            animal.feed()
-            food_points += animal.appetite
-    return food_points
+def feed_animals(animals: list[Animal]) -> int:
+    return sum(animal.feed() for animal in animals if animal.is_hungry)
