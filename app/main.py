@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
     def __init__(
             self,
@@ -21,35 +24,22 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(
-            self,
-            name: str,
-            appetite: int = 3,
-            is_hungry: bool = True
-    ) -> None:
-        super().__init__(name, appetite, is_hungry)
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, 3, is_hungry)
 
     @staticmethod
     def catch_mouse() -> None:
-        print(f"The hunt began!")
+        print("The hunt began!")
 
 
 class Dog(Animal):
-    def __init__(
-            self,
-            name: str,
-            appetite: int = 7,
-            is_hungry: bool = True
-    ) -> None:
-        super().__init__(name, appetite, is_hungry)
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, 7, is_hungry)
 
     @staticmethod
     def bring_slippers() -> None:
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
 
 
 def feed_animals(list_of_animals: list[Animal]) -> int:
-    all_food = 0
-    for animal in list_of_animals:
-        all_food += animal.feed()
-    return all_food
+    return sum(animal.feed() for animal in list_of_animals)
