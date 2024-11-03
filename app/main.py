@@ -35,7 +35,8 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers() -> None:
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
+
 
 def feed_animals(animals: list) -> int:
     total_food = 0
