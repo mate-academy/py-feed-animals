@@ -37,10 +37,6 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        elif self.is_hungry is False:
-            return 0
-        elif self.is_hungry is None:
-            return 0
         else:
             return 0
 
@@ -66,7 +62,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals_list: list[Animal.animals]) -> int:
+def feed_animals(animals_list: list[Animal]) -> int:
     """
     Feed every animal from a list using Animal.feed().
     :param animals_list: list of Animal instances.
@@ -82,5 +78,5 @@ def feed_animals(animals_list: list[Animal.animals]) -> int:
                 result.append(animal.appetite)
                 animal.feed()
     if len(animals_list) <= 1:
-        Animal.feed(animals_list[0])
+        animals_list[0].feed()
     return new_result
