@@ -25,7 +25,7 @@ class Cat(Animal):
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
-    def catch_mouse():
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
