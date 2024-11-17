@@ -42,8 +42,6 @@ def feed_animals(animals: [Animal]) -> int:
     count = 0
 
     for animal in animals:
-        if animal.is_hungry:
-            animal.feed()
-            count += animal.appetite
+        count += animal.feed()
 
     return count
