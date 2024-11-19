@@ -20,6 +20,8 @@ class Cat(Animal):
 
     def catch_mouse(self):
         print("The hunt began!")
+        # Let's set the cat to be hungry after catching a mouse, implying it gets an appetite.
+        self.is_hungry = True
 
 class Dog(Animal):
     def __init__(self, name, is_hungry=True):
@@ -27,6 +29,9 @@ class Dog(Animal):
 
     def bring_slippers(self):
         print("The slippers delivered!")
+        # Let's make the dog less hungry after delivering slippers, simulating the reward.
+        if self.is_hungry:
+            self.is_hungry = False  # Dog isn't hungry anymore after delivering slippers.
 
 def feed_animals(animals):
     total_food = 0
