@@ -38,6 +38,7 @@ Note: you need call the super class `__init__` method with `appetite` equal to 3
 `The hunt began!`
 
 Example:
+
 ```python
 cat = Cat("Cat")
 cat.print_name()  # "Hello, I'm Cat"
