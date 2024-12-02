@@ -30,7 +30,6 @@ class Cat(Animal):
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name)
-        self.name = name
         self.is_hungry = is_hungry
         self.appetite = 7
 
