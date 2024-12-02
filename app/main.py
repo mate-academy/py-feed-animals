@@ -17,7 +17,6 @@ class Animal:
             self.is_hungry = False
             eaten_points = self.appetite
             return eaten_points
-        self.appetite = 0
         return self.appetite
 
 
