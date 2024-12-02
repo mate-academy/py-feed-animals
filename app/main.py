@@ -16,13 +16,14 @@ class Animal:
             self.is_hungry = False
         return eaten
 
+
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name)
         self.appetite = 3
         self.is_hungry = is_hungry
 
-    def catch_mouse(self):
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
@@ -35,7 +36,7 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers() -> None:
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
 
 
 def feed_animals(animals: list) -> int:
