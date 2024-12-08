@@ -28,9 +28,7 @@ class Cat(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        self.name = name
         super().__init__(name, 3, is_hungry)
-        self.is_hungry = is_hungry
 
     @staticmethod
     def catch_mouse() -> None:
@@ -44,12 +42,11 @@ class Dog(Animal):
             name: str,
             is_hungry: bool = True
     ) -> None:
-        self.name = name
         super().__init__(name, 7, is_hungry)
-        self.is_hungry = is_hungry
 
     @staticmethod
     def bring_slippers() -> None:
+
         print("The slippers delivered!")
 
 
