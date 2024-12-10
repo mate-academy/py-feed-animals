@@ -1,5 +1,5 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True):
+    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
         """
         Initialize an Animal instance.
 
@@ -11,7 +11,7 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self):
+    def print_name(self) -> None:
         """Print the name of the animal."""
         print(f"Hello, I'm {self.name}")
 
@@ -29,7 +29,7 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self, name: str, is_hungry: bool = True):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         """
         Initialize a Cat instance.
 
@@ -38,13 +38,13 @@ class Cat(Animal):
         """
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
-    def catch_mouse(self):
+    def catch_mouse(self) -> None:
         """Simulate catching a mouse."""
         print("The hunt began!")
 
 
 class Dog(Animal):
-    def __init__(self, name: str, is_hungry: bool = True):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
         """
         Initialize a Dog instance.
 
@@ -53,7 +53,7 @@ class Dog(Animal):
         """
         super().__init__(name, appetite=7, is_hungry=is_hungry)
 
-    def bring_slippers(self):
+    def bring_slippers(self) -> None:
         """Simulate bringing slippers."""
         print("The slippers delivered!")
 
@@ -68,4 +68,4 @@ def feed_animals(animals: list[Animal]) -> int:
     total_food = 0
     for animal in animals:
         total_food += animal.feed()
-    return total_foods
+    return total_food
