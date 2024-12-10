@@ -2,7 +2,10 @@ from typing import List
 
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(self,
+                 name: str,
+                 appetite: int,
+                 is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -39,4 +42,3 @@ def feed_animals(animals: List[Animal]) -> int:
     for animal in animals:
         total_food += animal.feed()
     return total_food
-
