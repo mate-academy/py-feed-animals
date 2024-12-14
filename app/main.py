@@ -37,5 +37,6 @@ class Dog(Animal):
 
 def feed_animals(hungry_animals: list[Animal]) -> int:
     return sum(
-        animal.feed() for animal in hungry_animals if isinstance(animal, Animal)
+        animal.feed()
+        for animal in hungry_animals if isinstance(animal, Animal)
     )
