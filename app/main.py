@@ -10,14 +10,11 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> None:
-        if self.appetite > 0 and self.is_hungry is True:
+        if self.appetite > 0 and self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
-            result = self.appetite
-            self.appetite = 0
-        else:
-            result = 0
-        return result
+            return self.appetite
+        return 0
 
 
 class Cat(Animal):
@@ -40,7 +37,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: list) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     result = 0
     for animal in animals:
         if animal.appetite > 0 and animal.is_hungry is True:
