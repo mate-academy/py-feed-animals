@@ -206,3 +206,13 @@ def test_feed_animals_should_feed_animal():
     assert all([not animal.is_hungry for animal in [cat, lion, dog]]), (
         "Function `feed_animals` should feed all hungry animals."
     )
+
+
+def test_animal_feed_is_used(mocker):
+    mocked_method = mocker.patch("app.main.Animal.feed")
+    cat = main.Cat("Tom", is_hungry=True)
+    lion = main.Animal("Lion", appetite=25, is_hungry=True)
+    dog = main.Dog("Dog", is_hungry=True)
+    main.feed_animals([cat, lion, dog])
+    assert mocked_method.call_count > 0, ("You have to use 'animal.feed' "
+                                            "method in feed_animals function")
