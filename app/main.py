@@ -1,22 +1,17 @@
 class Animal:
     alive = []
 
-    def __init__(
-            self,
-            name: str,
-            appetite: int,
-            is_hungry: bool = True
-    ) -> None:
+    def __init__(self, name: str,
+                 appetite: int, is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
+        self.health = 100  # Default health for all animals
         Animal.alive.append(self)
 
     def __repr__(self) -> str:
-        return (f"{{"
-                f"Name: {self.name}, "
-                f"Appetite: {self.appetite}, "
-                f"Is Hungry: {self.is_hungry}}}")
+        return (f"{{Name: {self.name}, Appetite: {self.appetite}, "
+                f"Is Hungry: {self.is_hungry}, Health: {self.health}}}")
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
@@ -27,6 +22,10 @@ class Animal:
             self.is_hungry = False
             return self.appetite
         return 0
+
+    @classmethod
+    def remove_dead(cls) -> None:
+        cls.alive = [animal for animal in cls.alive if animal.health > 0]
 
 
 class Herbivore(Animal):
