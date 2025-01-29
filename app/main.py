@@ -42,10 +42,10 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(list_animals: list) -> None:
-    count = 0
-    for animals in list_animals:
-        if animals.is_hungry:
-            count += animals.appetite
-            animals.feed()
-    return count
+def feed_animals(list_animals: list) -> int:
+    apetite = sum(animal.appetite
+                  for animal in list_animals if animal.is_hungry)
+    for animal in list_animals:
+        if animal.is_hungry:
+            animal.feed()
+    return apetite
