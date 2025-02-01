@@ -9,7 +9,7 @@ class Animal:
             self.name = args[0]
         if len(args) > 1:
             self.appetite = args[1]
-        if len(args) > 2: 
+        if len(args) > 2:
             self.is_hungry = args[2]
         if "name" in kwargs:
             self.name = kwargs["name"]
