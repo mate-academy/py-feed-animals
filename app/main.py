@@ -1,12 +1,14 @@
 from __future__ import annotations
 from typing import Generator
 
+
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry = True) -> None:
+    def __init__(self, name: str, appetite: int,
+                 is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry and appetite > 0
-        
+
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
@@ -38,7 +40,7 @@ class Dog(Animal):
 def feed_animals(animals: list[Animal]) -> int:
     return sum(feeding_generator(animals))
 
-    
+
 def feeding_generator(animals: list[Animal]) -> Generator[int, None, None]:
     for animal in animals:
         yield animal.feed()
