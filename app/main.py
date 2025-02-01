@@ -1,23 +1,12 @@
 from __future__ import annotations
-
+from typing import Generator
 
 class Animal:
-    def __init__(self, *args, **kwargs) -> None:
-        self.is_hungry = True
-        self.appetite = 0
-        if len(args) > 0:
-            self.name = args[0]
-        if len(args) > 1:
-            self.appetite = args[1]
-        if len(args) > 2:
-            self.is_hungry = args[2]
-        if "name" in kwargs:
-            self.name = kwargs["name"]
-        if "appetite" in kwargs:
-            self.appetite = kwargs["appetite"]
-        if "is_hungry" in kwargs:
-            self.is_hungry = kwargs["is_hungry"]
-
+    def __init__(self, name: str, appetite: int, is_hungry = True) -> None:
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry and appetite > 0
+        
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
@@ -47,4 +36,9 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    return sum([animal.feed() for animal in animals])
+    return sum(feeding_generator(animals))
+
+    
+def feeding_generator(animals: list[Animal]) -> Generator[int, None, None]:
+    for animal in animals:
+        yield animal.feed()
