@@ -3,21 +3,19 @@ from __future__ import annotations
 
 class Animal:
 
-    def __init__(self,
-                 name: str,
-                 appetite: int,
-                 is_hungry: bool = True
-                 ) -> None:
+    def __init__(
+            self,
+            name: str,
+            appetite: int,
+            is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
 
     def __repr__(self) -> str:
-        return (f"{self.__class__.__name__}"
-                f"({self.name}, "
-                f" {self.appetite}, "
-                f" {self.is_hungry})"
-                )
+        return (f"{self.__class__.__name__}: \n  Name: {self.name}\n  "
+                f"Appetite: {self.appetite}\n  Hungry: {self.is_hungry}")
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
@@ -31,12 +29,8 @@ class Animal:
 
 
 class Cat(Animal):
-    def __init__(self,
-                 name: str,
-                 appetite: int = 3,
-                 is_hungry: bool = True
-                 ) -> None:
-        super().__init__(name, appetite, is_hungry)
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, appetite=3, is_hungry=is_hungry)
 
     @staticmethod
     def catch_mouse() -> None:
@@ -44,12 +38,8 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    def __init__(self,
-                 name: str,
-                 appetite: int = 7,
-                 is_hungry: bool = True
-                 ) -> None:
-        super().__init__(name, appetite, is_hungry)
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, appetite=7, is_hungry=is_hungry)
 
     @staticmethod
     def bring_slippers() -> None:
@@ -57,5 +47,5 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    total_points = sum(animal.feed() for animal in animals if animal.is_hungry)
+    total_points = sum(animal.feed() for animal in animals)
     return total_points
