@@ -7,27 +7,16 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def __repr__(self) -> str:
-        return (f"{{{self.name}, {self.appetite}, {self.is_hungry}}}")
-
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self) -> None:
+    def feed(self) -> int:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = not self.is_hungry
             return self.appetite
-        if not self.is_hungry:
+        else:
             return 0
-
-    @staticmethod
-    def feed_animals(*animals) -> int:
-        total_food = 0
-        for animal in animals:
-            total_food += animal.feed()
-        return total_food
-
 
 class Cat(Animal):
 
@@ -49,3 +38,10 @@ class Dog(Animal):
 
     def bring_slippers(self) -> None:
         print("The slippers delivered!")
+
+
+def feed_animals(*animals) -> int:
+    total_food = 0
+    for animal in animals:
+        total_food += animal.feed()
+    return total_food
