@@ -18,6 +18,7 @@ class Animal:
         else:
             return 0
 
+
 class Cat(Animal):
 
     def __init__(self, name: str,
@@ -40,11 +41,8 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-
 def feed_animals(animals: list) -> int:
-    return sum(animal.feed() for animal in animals)
-
-cat = Cat("Cat", False)
-lion = Animal("Lion", 25, True)
-dog = Dog("Dog")
-feed_animals([cat, lion, dog]) == 32
+    total_food = 0
+    for animal in animals:
+        total_food += animal.feed()
+    return total_food
