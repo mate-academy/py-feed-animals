@@ -166,7 +166,7 @@ def test_dog_feed_method(name, output):
 
 
 def test_cat_catch_method():
-    cat = main.Cat("My cat")
+    cat = main
     f = io.StringIO()
     with redirect_stdout(f):
         cat.catch_mouse()
