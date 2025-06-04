@@ -24,11 +24,11 @@ class Animal:
     # * `print_name` - should print
     # name in the following format: `Hello, I'm {name}`
 
-    def print_name(self):
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
     # * `feed` - should print `Eating {appetite} food points...`,
 
-    def feed(self):
+    def feed(self) -> None:
 
         # set `is_hungry` to `False` and return
         # number of eaten food points if animal is hungry.
@@ -69,7 +69,7 @@ class Cat(Animal):
     # additional method `catch_mouse` which should print
     # `The hunt began!`
 
-    def catch_mouse(self):
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 # Example:
@@ -98,7 +98,7 @@ class Dog(Animal):
     # method `bring_slippers` that should print
     # `The slippers delivered!`
 
-    def bring_slippers(self):
+    def bring_slippers(self) -> None:
 
         print("The slippers delivered!")
 # Example:
@@ -119,7 +119,7 @@ class Dog(Animal):
 # animals from this list.
 
 
-def feed_animals(animals: List[Animal]):
+def feed_animals(animals: List[Animal]) -> int:
 
     feed_points = 0
     for animal in animals:
