@@ -25,7 +25,7 @@ def test_classes_should_have_corresponding_methods(class_name, methods):
     class_to_test = getattr(main, class_name)
     for method in methods:
         assert (
-            hasattr(class_to_test, method) is True
+                hasattr(class_to_test, method) is True
         ), f"Class '{class_to_test}' should have method {method}"
 
 
@@ -37,7 +37,7 @@ def test_classes_should_have_corresponding_methods(class_name, methods):
     ],
 )
 def test_only_one_method_should_be_declared_in_each_of_children_classes(
-    class_name, method
+        class_name, method
 ):
     class_to_test = getattr(main, class_name)
     class_source = inspect.getsource(class_to_test)
@@ -46,7 +46,7 @@ def test_only_one_method_should_be_declared_in_each_of_children_classes(
         "Animal"
     ], f"'{class_name}' should be inherited from 'Animal'"
     assert (
-        len(parsed_class.body[0].body) == 2
+            len(parsed_class.body[0].body) == 2
     ), f"Only one method '{method}' should be defined inside class '{class_name}' except '__init__'"
     assert method in (
         parsed_class.body[0].body[0].name,
@@ -215,4 +215,4 @@ def test_animal_feed_is_used(mocker):
     dog = main.Dog("Dog", is_hungry=True)
     main.feed_animals([cat, lion, dog])
     assert mocked_method.call_count > 0, ("You have to use 'animal.feed' "
-                                            "method in feed_animals function")
+                                          "method in feed_animals function")
