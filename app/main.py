@@ -42,10 +42,3 @@ class Dog(Animal):
 
 def feed_animals(list_of_animals: list[Animal]) -> int:
     return sum(animal.feed() for animal in list_of_animals)
-
-
-if __name__ == "__main__":
-    cat = Cat("Cat", False)
-    lion = Animal("Lion", 25, True)
-    dog = Dog("Dog")
-    print(feed_animals([cat, lion, dog]))
