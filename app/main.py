@@ -37,7 +37,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animal_list: list) -> int:
+def feed_animals(animal_list: Animal) -> int:
     result = 0
     for animal in animal_list:
         result += animal.feed()
