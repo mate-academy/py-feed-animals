@@ -32,7 +32,8 @@ class Cat(Animal):
             appetite=3
         )
 
-    def catch_mouse(self) -> None:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
@@ -48,7 +49,8 @@ class Dog(Animal):
             appetite=7
         )
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
