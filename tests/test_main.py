@@ -5,7 +5,7 @@ from contextlib import redirect_stdout
 
 import pytest
 
-import app.main as main
+from app import main
 
 
 @pytest.mark.parametrize("class_name", ["Animal", "Cat", "Dog"])
