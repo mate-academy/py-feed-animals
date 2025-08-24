@@ -21,9 +21,7 @@ class Animal:
                 )
             )
             self.is_hungry = False
-            appetite = self.appetite
-            self.appetite -= appetite
-            return appetite
+            return self.appetite
         return 0
 
 
