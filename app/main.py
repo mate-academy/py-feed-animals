@@ -47,15 +47,17 @@ class Dog(Animal):
 
 
 def feed_animals(list_animals: list) -> int:
-    result = 0
-    for animal in list_animals:
-        potion = animal.feed()
-        result += potion
-
-        if potion != 0:
-            if isinstance(animal, Cat):
-                animal.catch_mouse()
-            elif isinstance(animal, Dog):
-                animal.bring_slippers()
-
-    return result
+    return sum(animal.feed() for animal in list_animals)
+    # result = 0
+    # for animal in list_animals:
+    #     if animal.is_hungry:
+    #         potion = animal.feed()
+    #         result += potion
+    #
+    #         if potion == 0:
+    #             if isinstance(animal, Cat):
+    #                 animal.catch_mouse()
+    #             elif isinstance(animal, Dog):
+    #                 animal.bring_slippers()
+    #
+    # return result
