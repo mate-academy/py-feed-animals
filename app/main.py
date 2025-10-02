@@ -29,3 +29,11 @@ class Cat(Animal):
     @staticmethod
     def catch_mouse():
         print("The hunt began!")
+
+class Dog(Animal):
+    def __init__(self, name: str, is_hungry: bool) -> None:
+        super().__init__(name, 7, is_hungry)
+
+    @staticmethod
+    def bring_slippers():
+        print("The slippers delivered!")
