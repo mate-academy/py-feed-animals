@@ -23,7 +23,7 @@ class Animal:
         return self.appetite
 
 class Cat(Animal):
-    def __init__(self, name: str, is_hungry: bool = True) -> None:
+    def __init__(self, name: str, is_hungry: bool) -> None:
         super().__init__(name, 3, is_hungry)
 
     @staticmethod
