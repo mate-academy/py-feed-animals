@@ -56,13 +56,14 @@ my_dict = {"one": "a", "two": "b"}
 [(k + "  " + v) for (k, v) in my_dict.items()]
 ```
 
-2. While creating a dictionary/list — write key-value pairs/values in a single row. The curly braces must be located in one of two options: open and start with the text or have a line break between the text. 
+2. While creating a dictionary/list — write key-value pairs/values in a single row. The curly braces must be located in
+   one of two options: open and start with the text or have a line break between the text.
 
 Good example:
 
 ```python
 my_dict = {
-    "greeting": "Good morning, have a nice day!", 
+    "greeting": "Good morning, have a nice day!",
     "answer": "Good morning, thanks!"
 }
 
@@ -71,15 +72,15 @@ my_dict = {
 Also a good example:
 
 ```python
-my_dict = {"greeting": "Good morning, have a nice day!", 
-	   "answer": "Good morning, thanks!"}
+my_dict = {"greeting": "Good morning, have a nice day!",
+           "answer": "Good morning, thanks!"}
 ```
 
 Bad example:
 
 ```python
-my_dict = {"greeting": "Good morning, have a nice day!", 
-	   "answer": "Good morning, thanks!"
-}
+my_dict = {"greeting": "Good morning, have a nice day!",
+           "answer": "Good morning, thanks!"
+           }
 ```
 
