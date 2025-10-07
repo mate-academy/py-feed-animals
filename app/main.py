@@ -1,40 +1,35 @@
 class Animal:
-    def __init__(self, name, appetite, is_hungry=True):
+    def __init__(self, name: str, appetite: int, is_hungry: bool = True):
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-    
-    def print_name(self):
+
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
-    
-    def feed(self):
+
+    def feed(self) -> int:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0  # ✅ Removed unnecessary else block
 
 
 class Cat(Animal):
-    def __init__(self, name, is_hungry=True):
+    def __init__(self, name: str, is_hungry: bool = True):
         super().__init__(name, appetite=3, is_hungry=is_hungry)
-    
-    def catch_mouse(self):
+
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
 class Dog(Animal):
-    def __init__(self, name, is_hungry=True):
+    def __init__(self, name: str, is_hungry: bool = True):
         super().__init__(name, appetite=7, is_hungry=is_hungry)
-    
-    def bring_slippers(self):
+
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
-def feed_animals(animals):
-    total_food_points = 0
-    for animal in animals:
-        food_points = animal.feed()
-        total_food_points += food_points
-    return total_food_points
+def feed_animals(animals: list[Animal]) -> int:  # ✅ Added type annotation
+    return sum(animal.feed() for animal in animals)  # ✅ Replaced loop with generator expression
