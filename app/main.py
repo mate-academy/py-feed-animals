@@ -2,25 +2,28 @@ from typing import List
 
 
 class Animal:
+    alive: List["Animal"] = []
+
     def __init__(
         self,
         name: str,
         appetite: int,
-        is_hungry: bool = True,
+        is_hungry: bool = True
     ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
+        Animal.alive.append(self)
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        if self.is_hungry:
-            print(f"Eating {self.appetite} food points...")
-            self.is_hungry = False
-            return self.appetite
-        return 0
+        if not self.is_hungry:
+            return 0
+        print(f"Eating {self.appetite} food points...")
+        self.is_hungry = False
+        return self.appetite
 
 
 class Cat(Animal):
@@ -40,7 +43,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: List[Animal]) -> int:
-    total_food = 0
-    for animal in animals:
-        total_food += animal.feed()
-    return total_food
+    return sum(animal.feed() for animal in animals)
