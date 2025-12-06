@@ -37,32 +37,3 @@ def feed_animals(animals):
     for animal in animals:
         total_food += animal.feed()
     return total_food
-✅ Перевірка прикладів:
-python
-lion = Animal("Lion", 25)
-lion.print_name()          # Hello, I'm Lion
-print(lion.feed())         # Eating 25 food points... → 25
-print(lion.is_hungry)      # False
-print(lion.feed())         # 0
-
-cat = Cat("Cat")
-cat.print_name()           # Hello, I'm Cat
-print(cat.feed())          # Eating 3 food points... → 3
-
-cat2 = Cat("Cat", False)
-print(cat2.feed())         # 0
-cat2.catch_mouse()         # The hunt began!
-
-dog = Dog("Dog")
-dog.print_name()           # Hello, I'm Dog
-print(dog.feed())          # Eating 7 food points... → 7
-
-dog2 = Dog("Dog", False)
-print(dog2.feed())         # 0
-dog2.bring_slippers()      # The slippers delivered!
-
-# Feeding many animals
-cat = Cat("Cat", False)
-lion = Animal("Lion", 25, True)
-dog = Dog("Dog")
-print(feed_animals([cat, lion, dog])) 
