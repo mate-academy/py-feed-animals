@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Animal:
     def __init__(self, name: str,
                  appetite: int,
