@@ -1,0 +1,36 @@
+[project]
+name = "py-feed-animals"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest",
+    "pytest-mock",
+    "flake8",
+    "flake8-annotations",
+    "flake8-quotes",
+    "flake8-variables-names",
+    "pep8-naming",
+]
+
+[tool.pytest.ini_options]
+addopts = "-p pytest_mock"
+
+[tool.black]
+line-length = 79
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
