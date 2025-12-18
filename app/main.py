@@ -18,9 +18,7 @@ class Animal:
 
         print(f"Eating {self.appetite} food points...")
         self.is_hungry = False
-        result = self.appetite
-        self.appetite = 0
-        return result
+        return self.appetite
 
 
 class Cat(Animal):
