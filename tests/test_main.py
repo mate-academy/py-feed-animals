@@ -215,4 +215,4 @@ def test_animal_feed_is_used(mocker):
     dog = main.Dog("Dog", is_hungry=True)
     main.feed_animals([cat, lion, dog])
     assert mocked_method.call_count > 0, ("You have to use 'animal.feed' "
-                                            "method in feed_animals function")
+                                          "method in feed_animals function")
