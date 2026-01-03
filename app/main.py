@@ -31,9 +31,5 @@ class Dog(Animal):
     def bring_slippers(self):
         print("The slippers delivered!")
 
-
 def feed_animals(animals):
-    total_food = 0
-    for animal in animals:
-        total_food += animal.feed()
-    return total_food
+    return sum(animal.feed() for animal in animals)
