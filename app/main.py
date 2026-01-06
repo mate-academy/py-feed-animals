@@ -38,6 +38,7 @@ class Dog(Animal):
                  appetite: int = 7,
                  is_hungry: bool = True
                  ) -> None:
+
         super().__init__(name, appetite, is_hungry)
 
     def bring_slippers(self) -> None:
