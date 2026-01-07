@@ -17,7 +17,7 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        # Usamos super() para passar o apetite fixo de 3 para a classe principal
+        # Herdando de Animal e definindo o apetite fixo de 3
         super().__init__(name, appetite=3, is_hungry=is_hungry)
 
     def catch_mouse(self) -> None:
@@ -26,7 +26,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        # Usamos super() para passar o apetite fixo de 7 para a classe principal
+        # Herdando de Animal e definindo o apetite fixo de 7
         super().__init__(name, appetite=7, is_hungry=is_hungry)
 
     def bring_slippers(self) -> None:
@@ -34,8 +34,8 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    total_food = 0
-    for animal in animals:
-        # Polimorfismo: chamamos .feed() sem precisar saber se é Dog, Cat ou Animal
-        total_food += animal.feed()
-    return total_food
+    """
+    Calcula o total de comida necessária usando uma generator expression.
+    Atende ao Checklist Item #2: 'Don't use a for loop if you can use generator expression.'
+    """
+    return sum(animal.feed() for animal in animals)
