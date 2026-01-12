@@ -1,1 +1,123 @@
-#  write your code here
+class Animal:
+    """
+    Class that represents an animal and its feeding state.
+
+    Attributes:
+
+        name (str): Is the name of te beast.
+
+        appetite (int): Number that represent how much food points this
+            animal need to eat to be full.
+
+        is_hungry (bool): Shows if animal is ready to eat with
+            True default value.
+    """
+
+    def __init__(
+            self,
+            name: str,
+            appetite: int,
+            is_hungry: bool = True
+    ) -> None:
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry
+
+    def print_name(
+            self,
+    ) -> None:
+        """
+        Print the animal's name with a greeting.
+        """
+        print(f"Hello, I'm {self.name}")
+
+    def feed(
+        self
+    ) -> int:
+        """
+        Feed the animal if it is hungry.
+
+        Returns:
+
+            int: The number of food points consumed.
+
+            Returns 0 if the animal was already full.
+        """
+        if self.is_hungry:
+            print(f"Eating {self.appetite} food points...")
+            self.is_hungry = False
+            return self.appetite
+        else:
+            return 0
+
+
+class Cat(Animal):
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True
+    ) -> None:
+        """
+        Child class that represents a cat.
+
+        Attributes:
+            name (str): Name of the cat.
+            is_hungry (bool): Current status of the cat's hunger.
+        """
+        super().__init__(
+            name=name,
+            appetite=3,
+            is_hungry=is_hungry
+        )
+
+    def catch_mouse(
+        self
+    ) -> None:
+        """
+        Print the start of the hunt.
+        """
+        print("The hunt began!")
+
+
+class Dog(Animal):
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True
+    ) -> None:
+        """
+        Child class that represents a dog.
+
+        Attributes:
+            name (str): The name of the dog.
+            is_hungry (bool): Current status of the dog's hunger.
+        """
+        super().__init__(
+            name=name,
+            appetite=7,
+            is_hungry=is_hungry
+        )
+
+    def bring_slippers(
+        self
+    ) -> None:
+        """
+        Print when the slippers has delivered.
+        """
+        print("The slippers delivered!")
+
+
+def feed_animals(
+        animals_group: list['Animal']
+) -> int:
+    """
+    Manages valid food points and returns the total sum.
+    Args:
+        animals_group (list["Animal"]: list of Animal instances.
+
+    Returns:
+        int: sum of the food points of the given Animal list.
+    """
+    food_point_sum = sum(animal.feed() for animal in animals_group)
+
+    return food_point_sum
