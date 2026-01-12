@@ -78,3 +78,32 @@ class Cat(Animal):
         Print the start of the hunt.
         """
         print("The hunt began!")
+
+
+class Dog(Animal):
+    """
+    Child class that represents a dog.
+
+    Attributes:
+        name (str): The name of the dog.
+        is_hungry (bool): Current status of the dog's hunger.
+    """
+
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True
+    ) -> None:
+        super().__init__(
+            name=name,
+            appetite=7,
+            is_hungry=is_hungry
+        )
+
+    def bring_slippers(
+        self
+    ) -> None:
+        """
+        Print when the slippers has delivered.
+        """
+        print("The slippers delivered!")
