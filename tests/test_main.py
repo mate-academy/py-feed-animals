@@ -2,7 +2,6 @@ import ast
 import inspect
 import io
 from contextlib import redirect_stdout
-
 import pytest
 
 import app.main as main
