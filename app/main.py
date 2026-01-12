@@ -52,20 +52,19 @@ class Animal:
 
 
 class Cat(Animal):
-    """
-    Child class that represents a cat.
-
-    Attributes:
-        name (str): Name of the cat.
-        is_hungry (bool): Current status of the cat's hunger.
-    """
-
     def __init__(
         self,
         name: str,
         is_hungry: bool = True
     ) -> None:
-        super.__init__(
+        """
+        Child class that represents a cat.
+
+        Attributes:
+            name (str): Name of the cat.
+            is_hungry (bool): Current status of the cat's hunger.
+        """
+        super().__init__(
             name=name,
             appetite=3,
             is_hungry=is_hungry
@@ -81,19 +80,18 @@ class Cat(Animal):
 
 
 class Dog(Animal):
-    """
-    Child class that represents a dog.
-
-    Attributes:
-        name (str): The name of the dog.
-        is_hungry (bool): Current status of the dog's hunger.
-    """
-
     def __init__(
         self,
         name: str,
         is_hungry: bool = True
     ) -> None:
+        """
+        Child class that represents a dog.
+
+        Attributes:
+            name (str): The name of the dog.
+            is_hungry (bool): Current status of the dog's hunger.
+        """
         super().__init__(
             name=name,
             appetite=7,
