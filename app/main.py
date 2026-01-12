@@ -49,3 +49,32 @@ class Animal:
             return self.appetite
         else:
             return 0
+
+
+class Cat(Animal):
+    """
+    Child class that represents a cat.
+
+    Attributes:
+        name (str): Name of the cat.
+        is_hungry (bool): Current status of the cat's hunger.
+    """
+
+    def __init__(
+        self,
+        name: str,
+        is_hungry: bool = True
+    ) -> None:
+        super.__init__(
+            name=name,
+            appetite=3,
+            is_hungry=is_hungry
+        )
+
+    def catch_mouse(
+        self
+    ) -> None:
+        """
+        Print the start of the hunt.
+        """
+        print("The hunt began!")
