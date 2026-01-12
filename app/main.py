@@ -107,3 +107,19 @@ class Dog(Animal):
         Print when the slippers has delivered.
         """
         print("The slippers delivered!")
+
+
+def feed_animals(
+        animals_group: list['Animal']
+) -> int:
+    """
+    Manages valid food points and returns the total sum.
+    Args:
+        animals_group (list["Animal"]: list of Animal instances.
+
+    Returns:
+        int: sum of the food points of the given Animal list.
+    """
+    food_point_sum = sum(animal.feed() for animal in animals_group)
+
+    return food_point_sum
