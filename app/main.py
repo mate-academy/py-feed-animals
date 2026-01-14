@@ -53,4 +53,4 @@ def feed_animals(animals_list: list[Animal]) -> int:
     # sum_appetites = 0
     # for animal in animals_list:
     #     sum_appetites += animal.feed()
-    return sum([animal.feed() for animal in animals_list])
+    return sum((animal.feed() for animal in animals_list))
