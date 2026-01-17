@@ -2,6 +2,7 @@ import ast
 import inspect
 import io
 from contextlib import redirect_stdout
+from unittest.mock import MagicMock
 
 import pytest
 
