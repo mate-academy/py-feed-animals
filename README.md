@@ -51,7 +51,7 @@ cat2.catch_mouse()  # "The hunt began!"
 The last class you should implement is a `Dog` class.
 Its `__init__` method should have two arguments:
 * `name` - the name of a dog
-* `is_hungry` - with `True` default value
+  * `is_hungry` - with `True` default value
 
 All dogs should have `appetite` equal to 7.
 
