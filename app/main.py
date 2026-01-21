@@ -7,14 +7,12 @@ class Animal:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
-        if not is_hungry:
-            self.appetite = 0
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        if self.appetite > 0:
+        if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
@@ -28,7 +26,7 @@ class Cat(Animal):
                  appetite: int = 3,
                  is_hungry: bool = True
                  ) -> None:
-        super().__init__(name, is_hungry)
+        super().__init__(name, appetite, is_hungry)
         self.appetite = appetite
 
     @staticmethod
@@ -41,7 +39,7 @@ class Dog(Animal):
                  name: str,
                  appetite: int = 7,
                  is_hungry: bool = True) -> None:
-        super().__init__(name, is_hungry)
+        super().__init__(name, appetite, is_hungry)
         self.appetite = appetite
 
     @staticmethod
