@@ -29,10 +29,6 @@ class Cat(Animal):
         print("The hunt began!")
 
 
-def catch_mouse() -> None:
-    print("The hunt began!")
-
-
 class Dog(Animal):
 
     def __init__(self, name: str, is_hungry: bool = True) -> None:
