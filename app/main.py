@@ -3,9 +3,9 @@ from typing import List
 
 class Animal:
     def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
-        self.name: str = name
-        self.appetite: int = appetite
-        self.is_hungry: bool = is_hungry
+        self.name = name
+        self.appetite = appetite
+        self.is_hungry = is_hungry
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
@@ -37,3 +37,4 @@ class Dog(Animal):
 
 def feed_animals(animals: List[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
+
