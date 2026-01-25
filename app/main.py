@@ -39,13 +39,3 @@ def feed_animals(animals: list[Animal]) -> int:
     for animal in animals:
         total_food += animal.feed()
     return total_food
-
-
-if __name__ == "__main__":
-    cat = Cat("Whiskers", False)
-    dog = Dog("Buddy")
-    lion = Animal("Lion", 25, True)
-
-    animals = [cat, dog, lion]
-    total_food_needed = feed_animals(animals)
-    print(f"Total food consumed: {total_food_needed} food points")
