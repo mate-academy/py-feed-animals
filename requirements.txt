@@ -1,2 +1,7 @@
-pytest==6.2.5
-flake8==4.0.1
+pytest
+flake8
+flake8-annotations
+flake8-quotes
+flake8-variables-names
+pep8-naming
+pytest-mock
