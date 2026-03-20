@@ -42,7 +42,3 @@ class Dog(Animal):
 
 def feed_animals(animals: List[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
-
-
-def catch_mouse() -> None:
-    print("The hunt began!")
