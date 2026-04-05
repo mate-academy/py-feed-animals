@@ -15,13 +15,10 @@ class Animal:
 
     def feed(self) -> int:
         if not self.is_hungry:
-            self.appetite = 0
             return 0
         print(f"Eating {self.appetite} food points...")
         self.is_hungry = False
-        hangry_points = self.appetite
-        self.appetite = 0
-        return hangry_points
+        return self.appetite
 
 
 class Cat(Animal):
