@@ -2,15 +2,17 @@ from typing import List
 
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+        self, name: str, appetite: int, is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self):
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self):
+    def feed(self) -> int:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
@@ -21,19 +23,15 @@ class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 3, is_hungry)
 
-    def catch_mouse(self):
+    def catch_mouse(self) -> None:
         print(f"The hunt began!")
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 7, is_hungry)
 
-    def bring_slippers(self):
+    def bring_slippers(self) -> None:
         print(f"The slippers delivered!")
 
 def feed_animals(obj_list: List[Animal]) -> int:
-    total = 0
-    for animal in obj_list:
-        total += animal.feed()
-
-    return total
+    return sum(animal.feed() for animal in obj_list)
