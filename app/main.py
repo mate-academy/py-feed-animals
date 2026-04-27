@@ -19,19 +19,22 @@ class Animal:
             return self.appetite
         return 0
 
+
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
-        print(f"The hunt began!")
+        print("The hunt began!")
+
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
-        print(f"The slippers delivered!")
+        print("The slippers delivered!")
+
 
 def feed_animals(obj_list: List[Animal]) -> int:
     return sum(animal.feed() for animal in obj_list)
