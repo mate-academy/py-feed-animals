@@ -2,7 +2,7 @@ from typing import List
 
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: int = True
+    def __init__(self, name: str, appetite: int, is_hungry: bool = True
                  ) -> None:
         self.name = name
         self.appetite = appetite
@@ -23,11 +23,10 @@ class Cat(Animal):
     def __init__(
             self,
             name: str,
-            is_hungry: int = True) -> None:
+            is_hungry: bool = True) -> None:
         super().__init__(name, 3, is_hungry)
 
-    @classmethod
-    def catch_mouse(cls) -> None:
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
@@ -38,8 +37,7 @@ class Dog(Animal):
             is_hungry: bool = True) -> None:
         super().__init__(name, 7, is_hungry)
 
-    @classmethod
-    def bring_slippers(cls) -> None:
+    def bring_slippers(self) -> None:
         print("The slippers delivered!")
 
 
