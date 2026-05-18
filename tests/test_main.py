@@ -174,7 +174,7 @@ def test_cat_catch_method():
 
 
 def test_dog_bring_slippers_method():
-    dog = main.Dog("My dog")
+    dog = main
     f = io.StringIO()
     with redirect_stdout(f):
         dog.bring_slippers()
