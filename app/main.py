@@ -44,4 +44,4 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 def feed_animals(animals: list[Animal]) -> int:
-    return sum([animal.appetite for animal in animals])
+    return sum([animal.appetite for animal in animals if animal.is_hungry])
