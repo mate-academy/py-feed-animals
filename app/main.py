@@ -41,3 +41,6 @@ class Dog(Animal):
     @staticmethod
     def bring_slippers() -> None:
         print("The slippers delivered!")
+
+def feed_animals(animals: list[Animal]) -> int:
+    return sum([animal.appetite for animal in animals])
