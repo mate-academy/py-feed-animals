@@ -4,7 +4,7 @@ class Animal:
             self,
             name: str,
             appetite: int,
-            is_hungry: bool
+            is_hungry: bool = True
     ) -> None:
         self.name = name
         self.appetite = appetite
