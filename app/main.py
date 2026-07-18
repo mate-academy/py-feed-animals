@@ -26,3 +26,10 @@ class Cat(Animal):
     def catch_mouse(self) -> None:
         print("The hunt began!")
 
+
+class Dog(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, is_hungry, appetite=7)
+
+    def bring_slippers(self):
+        print("The slippers delivered!")
