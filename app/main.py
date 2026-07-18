@@ -17,3 +17,12 @@ class Animal:
             return food
 
         return 0
+
+
+class Cat(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name, is_hungry, appetite=3)
+
+    def catch_mouse(self) -> None:
+        print("The hunt began!")
+
