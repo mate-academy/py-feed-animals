@@ -3,3 +3,17 @@ class Animal:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
+
+    def print_name(self) -> None:
+        print(f"Hello, I'm {self.name}")
+
+    def feed(self) -> int:
+        if self.is_hungry:
+            food = self.appetite
+
+            self.is_hungry = False
+            print(f"Eating {food} food points...")
+
+            return food
+
+        return 0
