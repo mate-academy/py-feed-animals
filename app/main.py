@@ -21,21 +21,19 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        self.name = name
-        self.is_hungry = is_hungry
-        super().__init__(name=self.name, is_hungry=is_hungry, appetite=3)
+        super().__init__(name=name, is_hungry=is_hungry, appetite=3)
 
-    def catch_mouse(self) -> None:
+    @staticmethod
+    def catch_mouse() -> None:
         print("The hunt began!")
 
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        self.name = name
-        self.is_hungry = is_hungry
-        super().__init__(name=self.name, is_hungry=is_hungry, appetite=7)
+        super().__init__(name=name, is_hungry=is_hungry, appetite=7)
 
-    def bring_slippers(self) -> None:
+    @staticmethod
+    def bring_slippers() -> None:
         print("The slippers delivered!")
 
 
