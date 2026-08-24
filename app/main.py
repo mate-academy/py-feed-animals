@@ -1,36 +1,39 @@
 class Animal:
-    alive = []
-
     def __init__(
         self,
         name: str,
-        health: int = 100,
-        hidden: bool = False,
+        appetite: int,
+        is_hungry: bool = True,
     ) -> None:
         self.name = name
-        self.health = health
-        self.hidden = hidden
-        Animal.alive.append(self)
+        self.appetite = appetite
+        self.is_hungry = is_hungry
 
-    def __repr__(self) -> str:
-        return (
-            f"{{Name: {self.name}, "
-            f"Health: {self.health}, "
-            f"Hidden: {self.hidden}}}"
-        )
+    def print_name(self) -> None:
+        print(f"Hello, I'm {self.name}")
 
-
-class Herbivore(Animal):
-    def hide(self) -> None:
-        self.hidden = not self.hidden
+    def feed(self) -> int:
+        if self.is_hungry:
+            self.is_hungry = False
+            return self.appetite
+        return 0
 
 
-class Carnivore(Animal):
-    def bite(self, animal: Animal) -> None:
-        if isinstance(animal, Carnivore) or animal.hidden:
-            return
+class Cat(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name=name, appetite=3, is_hungry=is_hungry)
 
-        animal.health -= 50
+    def catch_mouse(self) -> None:
+        print("The cat caught a mouse!")
 
-        if animal.health <= 0 and animal in Animal.alive:
-            Animal.alive.remove(animal)
+
+class Dog(Animal):
+    def __init__(self, name: str, is_hungry: bool = True) -> None:
+        super().__init__(name=name, appetite=7, is_hungry=is_hungry)
+
+    def bring_slippers(self) -> None:
+        print("The dog brought slippers!")
+
+
+def feed_animals(animals: list[Animal]) -> int:
+    return sum(animal.feed() for animal in animals)
