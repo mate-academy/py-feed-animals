@@ -27,7 +27,6 @@ class Cat(Animal):
         self.name = name
         self.is_hungry = is_hungry
 
-
     def catch_mouse(self) -> None:
         print("The hunt began!")
 
