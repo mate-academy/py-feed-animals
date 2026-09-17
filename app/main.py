@@ -1,5 +1,9 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(self,
+                 name: str,
+                 appetite: int,
+                 is_hungry: bool = True
+                 ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -12,8 +16,8 @@ class Animal:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             return self.appetite
-        else:
-            return 0
+        return 0
+
 
 class Cat(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
@@ -21,6 +25,7 @@ class Cat(Animal):
 
     def catch_mouse(self) -> None:
         print("The hunt began!")
+
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
