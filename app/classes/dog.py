@@ -4,10 +4,9 @@ from app.classes.animal import Animal
 class Dog(Animal):
     def __init__(self,
                  name: str,
-                 appetite: int = 7,
                  is_hungry: bool = True) -> None:
         super().__init__(name,
-                         appetite,
+                         7,
                          is_hungry)
 
     @staticmethod

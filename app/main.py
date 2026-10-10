@@ -4,7 +4,4 @@ from app.classes.dog import Dog
 
 
 def feed_animals(animals: list[Animal | Cat | Dog]) -> int:
-    food_needed = 0
-    for animal in animals:
-        food_needed += animal.feed()
-    return food_needed
+    return sum(animal.feed() for animal in animals)
