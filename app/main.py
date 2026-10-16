@@ -2,11 +2,11 @@ class Animal:
     def __init__(
         self, name: str, appetite: int, is_hungry: bool = True
     ) -> None:
-        self.name = (name,)
-        self.appetite = (appetite,)
+        self.name = name
+        self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self, name: str) -> None:
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
@@ -34,7 +34,7 @@ class Dog(Animal):
         print("The slippers delivered!")
 
 
-def feed_animals(animals: any) -> int:
+def feed_animals(animals: list[Animal]) -> int:
     total = 0
 
     for animal in animals:
