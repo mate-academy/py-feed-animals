@@ -11,7 +11,7 @@ Create class `Animal` which `__init__` method takes three arguments:
 
 `Animal` should have two methods:
 * `print_name` - should print name in the following format: `Hello, I'm {name}`
-* `feed` - should print `Eating {appetite} food points...`, 
+* `feed` - should print `Eating {appetite} food points...`,
 set `is_hungry` to `False` and return number of eaten food points if animal is hungry.
 Otherwise, it should return 0 and print nothing.
 
@@ -27,14 +27,14 @@ print(lion.feed())  # 0
 
 There is a well-known fact that all cats eat 3 food points at a time.
 Also, they can catch a mouse.
-Write `Cat` class which is a child of `Animal`. 
+Write `Cat` class which is a child of `Animal`.
 It should have the `__init__` method with two arguments:
 * `name` - the name of a cat
 * `is_hungry` - with `True` default value
 
 Note: you need call the super class `__init__` method with `appetite` equal to 3.
 
-`Cat` should have only one additional method `catch_mouse` which should print 
+`Cat` should have only one additional method `catch_mouse` which should print
 `The hunt began!`
 
 Example:
@@ -70,7 +70,7 @@ dog2.bring_slippers()  # "The slippers delivered!"
 ```
 
 Now, it's time to feed many animals at a time.
-Implement `feed_animals` function which takes a list of animals. 
+Implement `feed_animals` function which takes a list of animals.
 It should feed passed animals and return a sum of food points that are needed to feed all hungry
 animals from this list.
 
