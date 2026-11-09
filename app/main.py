@@ -28,8 +28,8 @@ class Cat(Animal):
     ) -> None:
         super().__init__(name, 3, is_hungry)
 
-    @staticmethod
-    def catch_mouse() -> None:
+    @classmethod
+    def catch_mouse(cls) -> None:
         print("The hunt began!")
 
 
@@ -41,8 +41,8 @@ class Dog(Animal):
     ) -> None:
         super().__init__(name, 7, is_hungry)
 
-    @staticmethod
-    def bring_slippers() -> None:
+    @classmethod
+    def bring_slippers(cls) -> None:
         print("The slippers delivered!")
 
 
