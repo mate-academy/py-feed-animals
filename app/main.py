@@ -5,11 +5,11 @@ class Animal:
         self,
         name: str,
         appetite: int,
-        is_hungry: bool = True
+        is_hungry: bool = True,
     ) -> None:
         self.name = name
-        self.appetite = appetite
         self.is_hungry = is_hungry
+        self.appetite = appetite
         self.animals.append(self)
 
     def print_name(self) -> None:
@@ -28,9 +28,8 @@ class Cat(Animal):
         self,
         name: str,
         is_hungry: bool = True,
-        appetite: int = 3,
     ) -> None:
-        super().__init__(name, appetite, is_hungry)
+        super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> str:
         print("The hunt began!")
@@ -41,7 +40,6 @@ class Dog(Animal):
         self,
         name: str,
         is_hungry: bool = True,
-        appetite: int = 7,
     ) -> None:
         super().__init__(name, 7, is_hungry)
 
