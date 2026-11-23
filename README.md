@@ -15,7 +15,7 @@ Create class `Animal` which `__init__` method takes three arguments:
 set `is_hungry` to `False` and return number of eaten food points if animal is hungry.
 Otherwise, it should return 0 and print nothing.
 
-Example:
+Example:  
 ```python
 lion = Animal("Lion", 25)
 lion.print_name()  # "Hello, I'm Lion"
