@@ -37,14 +37,4 @@ class Dog(Animal):
 
 
 def feed_animals(animals: list[Animal]) -> int:
-    food_points = 0
-    for animal in animals:
-        if isinstance(animal, Cat):
-            food_points += animal.feed()
-            animal.catch_mouse()
-        elif isinstance(animal, Dog):
-            food_points += animal.feed()
-            animal.bring_slippers()
-        else:
-            food_points += animal.feed()
-    return food_points
+    return sum(animal.feed() for animal in animals)
